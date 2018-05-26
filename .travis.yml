@@ -58,3 +58,4 @@ deploy:
       repo: stellar/go
       tags: true
       go: '1.9'
+
