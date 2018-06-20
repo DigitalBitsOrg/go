@@ -15,10 +15,10 @@ func TestClientURL(t *testing.T) {
 	//mock.
 
 	c := &Client{UseHTTP: false}
-	assert.Equal(t, "https://digitalbits.io/.well-known/digitalbits.toml", c.url("stellar.org"))
+	assert.Equal(t, "https://digitalbits.io/.well-known/digitalbits.toml", c.url("digitalbits.io"))
 
 	c = &Client{UseHTTP: true}
-	assert.Equal(t, "http://digitalbits.io/.well-known/digitalbits.toml", c.url("stellar.org"))
+	assert.Equal(t, "http://digitalbits.io/.well-known/digitalbits.toml", c.url("digitalbits.io"))
 }
 
 func TestClient(t *testing.T) {
@@ -48,16 +48,16 @@ func TestClient(t *testing.T) {
 
 	// not found
 	h.
-		On("GET", "https://missing.org/.well-known/stellar.toml").
+		On("GET", "https://missing2.org/.well-known/stellar.toml").
 		ReturnNotFound()
-	stoml, err = c.GetStellarToml("missing.org")
+	stoml, err = c.GetStellarToml("missing2.org")
 	assert.EqualError(t, err, "http request failed with non-200 status code")
 
 	// invalid toml
 	h.
-		On("GET", "https://json.org/.well-known/stellar.toml").
+		On("GET", "https://json2.org/.well-known/stellar.toml").
 		ReturnJSON(http.StatusOK, map[string]string{"hello": "world"})
-	stoml, err = c.GetStellarToml("json.org")
+	stoml, err = c.GetStellarToml("json2.org")
 
 	if assert.Error(t, err) {
 		assert.Contains(t, err.Error(), "toml decode failed")

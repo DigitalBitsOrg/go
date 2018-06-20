@@ -32,7 +32,7 @@ func (c *Client) GetStellarToml(domain string) (resp *Response, err error) {
 	// StellarTomlMaxSize long and is incorrect toml. Check discussion:
 	// https://github.com/stellar/go/pull/24#discussion_r89909696
 	if err != nil && limitReader.(*io.LimitedReader).N == 0 {
-		err = errors.Errorf("stellar.toml response exceeds %d bytes limit", StellarTomlMaxSize)
+		err = errors.Errorf("digitalbits.toml response exceeds %d bytes limit", StellarTomlMaxSize)
 		return
 	}
 

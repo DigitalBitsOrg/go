@@ -18,7 +18,7 @@ func TestBuild(t *testing.T) {
 //
 // It uses the transaction builder system
 func ExampleTransactionBuilder() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -55,7 +55,7 @@ func ExampleTransactionBuilder() {
 // encodes the transaction into a base64 string capable of being submitted to stellar-core. It uses
 // the transaction builder system.
 func ExampleCreateAccount() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -91,7 +91,7 @@ func ExampleCreateAccount() {
 // ExamplePayment creates and signs a native-asset Payment, encodes it into a base64 string capable of
 // being submitted to stellar-core. It uses the transaction builder system.
 func ExamplePayment() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -127,7 +127,7 @@ func ExamplePayment() {
 // ExamplePathPayment creates and signs a simple transaction with PathPayment operation, and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExamplePathPayment() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -166,7 +166,7 @@ func ExamplePathPayment() {
 // ExampleSetOptions creates and signs a simple transaction with SetOptions operation, and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleSetOptions() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -211,7 +211,7 @@ func ExampleSetOptions() {
 // ExampleSetOptions_manyOperations creates and signs a simple transaction with many SetOptions operations, and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleSetOptions_manyOperations() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -254,7 +254,7 @@ func ExampleSetOptions_manyOperations() {
 // ExampleChangeTrust creates and signs a simple transaction with ChangeTrust operation, and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleChangeTrust() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -287,7 +287,7 @@ func ExampleChangeTrust() {
 // ExampleChangeTrust_maxLimit creates and signs a simple transaction with ChangeTrust operation (maximum limit), and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleChangeTrust_maxLimit() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -320,7 +320,7 @@ func ExampleChangeTrust_maxLimit() {
 // ExampleRemoveTrust creates and signs a simple transaction with ChangeTrust operation (remove trust), and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleRemoveTrust() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	operationSource := "GCVJCNUHSGKOTBBSXZJ7JJZNOSE2YDNGRLIDPMQDUEQWJQSE6QZSDPNU"
 	tx, err := Transaction(
 		SourceAccount{seed},
@@ -364,7 +364,7 @@ func ExampleManageOffer() {
 		Price:   Price("125.12"),
 	}
 
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -405,7 +405,7 @@ func ExampleCreatePassiveOffer() {
 		Price:   Price("125.12"),
 	}
 
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -438,7 +438,7 @@ func ExampleCreatePassiveOffer() {
 // ExampleAccountMerge creates and signs a simple transaction with AccountMerge operation, and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleAccountMerge() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
@@ -473,7 +473,7 @@ func ExampleAccountMerge() {
 // ExampleInflation creates and signs a simple transaction with Inflation operation, and then
 // encodes it into a base64 string capable of being submitted to stellar-core.
 func ExampleInflation() {
-	seed := "SDOTALIMPAM2IV65IOZA7KZL7XWZI5BODFXTRVLIHLQZQCKK57PH5F3H"
+	seed := "SDBNWCXQ6JTYG2SI6373PAUQXH2LYSZWKCXK262FAWHAG4MIHND3HCOL"
 	tx, err := Transaction(
 		SourceAccount{seed},
 		Sequence{1},
