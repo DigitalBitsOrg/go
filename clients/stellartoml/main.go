@@ -7,7 +7,7 @@ const StellarTomlMaxSize = 5 * 1024
 
 // WellKnownPath represents the url path at which the stellar.toml file should
 // exist to conform to the federation protocol.
-const WellKnownPath = "/.well-known/stellar.toml"
+const WellKnownPath = "/.well-known/digitalbits.toml"
 
 // DefaultClient is a default client using the default parameters
 var DefaultClient = &Client{HTTP: http.DefaultClient}

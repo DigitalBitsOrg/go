@@ -7,8 +7,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/http/httptest"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/support/http/httptest"
 	"golang.org/x/net/context"
 )
 
