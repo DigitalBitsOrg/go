@@ -7,11 +7,11 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/stellar/go/services/horizon/internal/ledger"
-	"github.com/stellar/go/services/horizon/internal/test"
-	"github.com/stellar/go/services/horizon/internal/toid"
-	"github.com/stellar/go/support/render/problem"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/services/horizon/internal/ledger"
+	"github.com/digitalbitsorg/go/services/horizon/internal/test"
+	"github.com/digitalbitsorg/go/services/horizon/internal/toid"
+	"github.com/digitalbitsorg/go/support/render/problem"
+	"github.com/digitalbitsorg/go/xdr"
 	"github.com/zenazn/goji/web"
 )
 
