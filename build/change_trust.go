@@ -1,9 +1,9 @@
 package build
 
 import (
-	"github.com/stellar/go/amount"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/amount"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/xdr"
 )
 
 // ChangeTrust groups the creation of a new ChangeTrustBuilder with a call to Mutate.
