@@ -10,8 +10,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/log"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/support/log"
 	"golang.org/x/net/http2"
 	"gopkg.in/tylerb/graceful.v1"
 )

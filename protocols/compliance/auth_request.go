@@ -7,9 +7,9 @@ import (
 	"net/url"
 
 	"github.com/asaskevich/govalidator"
-	"github.com/stellar/go/clients/stellartoml"
-	"github.com/stellar/go/keypair"
-	"github.com/stellar/go/support/errors"
+	"github.com/digitalbitsorg/go/clients/stellartoml"
+	"github.com/digitalbitsorg/go/keypair"
+	"github.com/digitalbitsorg/go/support/errors"
 )
 
 func (r *AuthRequest) Populate(request *http.Request) *AuthRequest {

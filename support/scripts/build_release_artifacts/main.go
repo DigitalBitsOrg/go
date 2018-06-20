@@ -14,8 +14,8 @@ import (
 
 	"time"
 
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/log"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/support/log"
 )
 
 var extractBinName = regexp.MustCompile(`^(?P<bin>[a-z-]+)-(?P<tag>.+)$`)
