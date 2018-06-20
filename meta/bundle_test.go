@@ -1,7 +1,7 @@
 package meta_test
 
 import (
-	. "github.com/stellar/go/meta"
+	. "github.com/digitalbitsorg/go/meta"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

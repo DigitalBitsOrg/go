@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/stellar/go/services/horizon/internal/db2/core"
-	"github.com/stellar/go/services/horizon/internal/paths"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/core"
+	"github.com/digitalbitsorg/go/services/horizon/internal/paths"
+	"github.com/digitalbitsorg/go/xdr"
 )
 
 // pathNode implements the paths.Path interface and represents a path

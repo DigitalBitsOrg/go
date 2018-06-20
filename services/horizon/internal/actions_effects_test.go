@@ -3,7 +3,7 @@ package horizon
 import (
 	"testing"
 
-	"github.com/stellar/go/services/horizon/internal/test"
+	"github.com/digitalbitsorg/go/services/horizon/internal/test"
 )
 
 func TestEffectActions_Index(t *testing.T) {

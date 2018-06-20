@@ -5,14 +5,14 @@ package resource
 import (
 	"time"
 
-	"github.com/stellar/go/services/horizon/internal/db2/history"
-	"github.com/stellar/go/services/horizon/internal/resource/base"
-	"github.com/stellar/go/services/horizon/internal/resource/effects"
-	"github.com/stellar/go/services/horizon/internal/resource/operations"
-	"github.com/stellar/go/services/horizon/internal/render/hal"
-	"github.com/stellar/go/strkey"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/history"
+	"github.com/digitalbitsorg/go/services/horizon/internal/resource/base"
+	"github.com/digitalbitsorg/go/services/horizon/internal/resource/effects"
+	"github.com/digitalbitsorg/go/services/horizon/internal/resource/operations"
+	"github.com/digitalbitsorg/go/services/horizon/internal/render/hal"
+	"github.com/digitalbitsorg/go/strkey"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/xdr"
 	"golang.org/x/net/context"
 )
 

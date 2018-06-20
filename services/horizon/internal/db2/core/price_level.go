@@ -3,8 +3,8 @@ package core
 import (
 	"math/big"
 
-	"github.com/stellar/go/amount"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/amount"
+	"github.com/digitalbitsorg/go/xdr"
 )
 
 // InvertPricef returns the inverted price of the price-level, i.e. what the price would be if you were

@@ -3,9 +3,9 @@ package ingest
 import (
 	"database/sql"
 
-	"github.com/stellar/go/services/horizon/internal/db2/core"
-	"github.com/stellar/go/support/db"
-	"github.com/stellar/go/support/errors"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/core"
+	"github.com/digitalbitsorg/go/support/db"
+	"github.com/digitalbitsorg/go/support/errors"
 )
 
 // Load runs queries against `core` to fill in the records of the bundle.

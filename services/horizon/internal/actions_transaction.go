@@ -3,15 +3,15 @@ package horizon
 import (
 	"net/http"
 
-	"github.com/stellar/go/services/horizon/internal/db2"
-	"github.com/stellar/go/services/horizon/internal/db2/history"
-	"github.com/stellar/go/services/horizon/internal/render/hal"
-	hProblem "github.com/stellar/go/services/horizon/internal/render/problem"
-	"github.com/stellar/go/services/horizon/internal/render/sse"
-	"github.com/stellar/go/services/horizon/internal/resource"
-	"github.com/stellar/go/services/horizon/internal/txsub"
-	halRender "github.com/stellar/go/support/render/hal"
-	"github.com/stellar/go/support/render/problem"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/history"
+	"github.com/digitalbitsorg/go/services/horizon/internal/render/hal"
+	hProblem "github.com/digitalbitsorg/go/services/horizon/internal/render/problem"
+	"github.com/digitalbitsorg/go/services/horizon/internal/render/sse"
+	"github.com/digitalbitsorg/go/services/horizon/internal/resource"
+	"github.com/digitalbitsorg/go/services/horizon/internal/txsub"
+	halRender "github.com/digitalbitsorg/go/support/render/hal"
+	"github.com/digitalbitsorg/go/support/render/problem"
 )
 
 // This file contains the actions:

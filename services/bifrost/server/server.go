@@ -13,15 +13,15 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/middleware"
-	"github.com/stellar/go/keypair"
-	"github.com/stellar/go/services/bifrost/bitcoin"
-	"github.com/stellar/go/services/bifrost/common"
-	"github.com/stellar/go/services/bifrost/database"
-	"github.com/stellar/go/services/bifrost/ethereum"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/http/server"
-	"github.com/stellar/go/support/log"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/keypair"
+	"github.com/digitalbitsorg/go/services/bifrost/bitcoin"
+	"github.com/digitalbitsorg/go/services/bifrost/common"
+	"github.com/digitalbitsorg/go/services/bifrost/database"
+	"github.com/digitalbitsorg/go/services/bifrost/ethereum"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/support/http/server"
+	"github.com/digitalbitsorg/go/support/log"
+	"github.com/digitalbitsorg/go/xdr"
 )
 
 func (s *Server) Start() error {

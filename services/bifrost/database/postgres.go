@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stellar/go/services/bifrost/queue"
-	"github.com/stellar/go/services/bifrost/sse"
-	"github.com/stellar/go/support/db"
-	"github.com/stellar/go/support/errors"
+	"github.com/digitalbitsorg/go/services/bifrost/queue"
+	"github.com/digitalbitsorg/go/services/bifrost/sse"
+	"github.com/digitalbitsorg/go/support/db"
+	"github.com/digitalbitsorg/go/support/errors"
 )
 
 const (

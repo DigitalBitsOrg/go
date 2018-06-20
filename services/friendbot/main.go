@@ -10,11 +10,11 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/cors"
 	"github.com/spf13/cobra"
-	"github.com/stellar/go/services/friendbot/internal"
-	"github.com/stellar/go/support/config"
-	"github.com/stellar/go/support/http/server"
-	"github.com/stellar/go/support/log"
-	"github.com/stellar/go/support/render/problem"
+	"github.com/digitalbitsorg/go/services/friendbot/internal"
+	"github.com/digitalbitsorg/go/support/config"
+	"github.com/digitalbitsorg/go/support/http/server"
+	"github.com/digitalbitsorg/go/support/log"
+	"github.com/digitalbitsorg/go/support/render/problem"
 )
 
 // Config represents the configuration of a friendbot server
@@ -32,8 +32,8 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:   "friendbot",
-		Short: "friendbot for the Stellar Test Network",
-		Long:  "client-facing api server for the friendbot service on the Stellar Test Network",
+		Short: "friendbot for the DigitalBits Test Network",
+		Long:  "client-facing api server for the friendbot service on the DigitalBits Test Network",
 		Run:   run,
 	}
 

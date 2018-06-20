@@ -3,10 +3,10 @@ package stellar
 import (
 	"strconv"
 
-	"github.com/stellar/go/build"
-	"github.com/stellar/go/clients/horizon"
-	"github.com/stellar/go/support/errors"
-	"github.com/stellar/go/support/log"
+	"github.com/digitalbitsorg/go/build"
+	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/digitalbitsorg/go/support/log"
 )
 
 func (ac *AccountConfigurator) createAccount(destination string) error {

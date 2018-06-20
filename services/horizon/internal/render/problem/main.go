@@ -3,8 +3,8 @@ package problem
 import (
 	"net/http"
 
-	"github.com/stellar/go/services/horizon/internal/context/requestid"
-	"github.com/stellar/go/support/render/problem"
+	"github.com/digitalbitsorg/go/services/horizon/internal/context/requestid"
+	"github.com/digitalbitsorg/go/support/render/problem"
 	"golang.org/x/net/context"
 )
 

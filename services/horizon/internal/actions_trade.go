@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/stellar/go/services/horizon/internal/db2"
-	"github.com/stellar/go/services/horizon/internal/db2/history"
-	"github.com/stellar/go/services/horizon/internal/render/hal"
-	"github.com/stellar/go/services/horizon/internal/resource"
-	halRender "github.com/stellar/go/support/render/hal"
-	"github.com/stellar/go/support/time"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/history"
+	"github.com/digitalbitsorg/go/services/horizon/internal/render/hal"
+	"github.com/digitalbitsorg/go/services/horizon/internal/resource"
+	halRender "github.com/digitalbitsorg/go/support/render/hal"
+	"github.com/digitalbitsorg/go/support/time"
+	"github.com/digitalbitsorg/go/xdr"
 )
 
 type TradeIndexAction struct {

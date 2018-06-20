@@ -3,9 +3,9 @@ package simplepath
 import (
 	"testing"
 
-	"github.com/stellar/go/services/horizon/internal/db2/core"
-	"github.com/stellar/go/services/horizon/internal/test"
-	"github.com/stellar/go/xdr"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/core"
+	"github.com/digitalbitsorg/go/services/horizon/internal/test"
+	"github.com/digitalbitsorg/go/xdr"
 )
 
 func TestOrderBook(t *testing.T) {

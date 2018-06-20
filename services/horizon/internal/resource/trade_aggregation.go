@@ -1,9 +1,9 @@
 package resource
 
 import (
-	"github.com/stellar/go/amount"
-	"github.com/stellar/go/price"
-	"github.com/stellar/go/services/horizon/internal/db2/history"
+	"github.com/digitalbitsorg/go/amount"
+	"github.com/digitalbitsorg/go/price"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/history"
 	"golang.org/x/net/context"
 )
 

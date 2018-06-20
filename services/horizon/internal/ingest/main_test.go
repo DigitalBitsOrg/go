@@ -3,9 +3,9 @@ package ingest
 import (
 	"testing"
 
-	"github.com/stellar/go/network"
-	"github.com/stellar/go/services/horizon/internal/ledger"
-	"github.com/stellar/go/services/horizon/internal/test"
+	"github.com/digitalbitsorg/go/network"
+	"github.com/digitalbitsorg/go/services/horizon/internal/ledger"
+	"github.com/digitalbitsorg/go/services/horizon/internal/test"
 )
 
 func TestIngest(t *testing.T) {

@@ -1,11 +1,11 @@
 package resource
 
 import (
-	"github.com/stellar/go/amount"
-	"github.com/stellar/go/services/horizon/internal/assets"
-	"github.com/stellar/go/services/horizon/internal/db2/core"
-	"github.com/stellar/go/services/horizon/internal/httpx"
-	"github.com/stellar/go/services/horizon/internal/render/hal"
+	"github.com/digitalbitsorg/go/amount"
+	"github.com/digitalbitsorg/go/services/horizon/internal/assets"
+	"github.com/digitalbitsorg/go/services/horizon/internal/db2/core"
+	"github.com/digitalbitsorg/go/services/horizon/internal/httpx"
+	"github.com/digitalbitsorg/go/services/horizon/internal/render/hal"
 	"golang.org/x/net/context"
 )
 

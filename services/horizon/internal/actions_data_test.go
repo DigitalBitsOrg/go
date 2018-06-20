@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/stellar/go/services/horizon/internal/test"
+	"github.com/digitalbitsorg/go/services/horizon/internal/test"
 )
 
 func TestDataActions_Show(t *testing.T) {

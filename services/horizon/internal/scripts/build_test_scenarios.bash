@@ -13,7 +13,7 @@ createdb hayashi_scenarios
 
 export STELLAR_CORE_DATABASE_URL="postgres://localhost/hayashi_scenarios?sslmode=disable"
 export DATABASE_URL="postgres://localhost/horizon_scenarios?sslmode=disable"
-export NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
+export NETWORK_PASSPHRASE="Test DigitalBits Network ; December 2017"
 export STELLAR_CORE_URL="http://localhost:8080"
 export SKIP_CURSOR_UPDATE="true"
 
