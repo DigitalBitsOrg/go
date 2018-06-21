@@ -181,7 +181,7 @@ func ExampleSetOptions() {
 			ClearAuthImmutable(),
 			MasterWeight(1),
 			SetThresholds(2, 3, 4),
-			HomeDomain("digitalbits.io"),
+			HomeDomain("stellar.org"),
 			AddSigner("GC6DDGPXVWXD5V6XOWJ7VUTDYI7VKPV2RAJWBVBHR47OPV5NASUNHTJW", 5),
 		),
 	)
@@ -225,7 +225,7 @@ func ExampleSetOptions_manyOperations() {
 		ClearAuthImmutable(),
 		MasterWeight(1),
 		SetThresholds(2, 3, 4),
-		HomeDomain("digitalbits.io"),
+		HomeDomain("stellar.org"),
 		RemoveSigner("GC6DDGPXVWXD5V6XOWJ7VUTDYI7VKPV2RAJWBVBHR47OPV5NASUNHTJW"),
 	)
 
