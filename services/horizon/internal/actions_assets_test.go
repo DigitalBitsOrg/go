@@ -14,6 +14,7 @@ func TestAssetsActions(t *testing.T) {
 	}{
 		Toml: hal.NewLink("https://test.com/.well-known/digitalbits.toml"),
 	}
+	
 	empty := struct {
 		Toml hal.Link `json:"toml"`
 	}{
