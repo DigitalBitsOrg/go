@@ -18,13 +18,13 @@ import (
 
 // DefaultTestNetClient is a default client to connect to test network
 var DefaultTestNetClient = &Client{
-	URL:  "https://horizon-testnet.stellar.org",
+	URL:  "https://horizon.testnet.digitalbits.io",
 	HTTP: http.DefaultClient,
 }
 
 // DefaultPublicNetClient is a default client to connect to public network
 var DefaultPublicNetClient = &Client{
-	URL:  "https://horizon.stellar.org",
+	URL:  "https://horizon.livenet.digitalbits.io",
 	HTTP: http.DefaultClient,
 }
 
