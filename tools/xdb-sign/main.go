@@ -1,4 +1,4 @@
-// stellar-sign is a small interactive utility to help you contribute a
+// xdb-sign is a small interactive utility to help you contribute a
 // signature to a transaction envelope.
 //
 // It prompts you for a key

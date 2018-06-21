@@ -1,8 +1,8 @@
 # Clients package
 
-Packages contained by this package provide client libraries for accessing the ecosystem of stellar services.  At present, it only contains a simple horizon client library, but in the future it will contain clients to interact with stellar-core, federation, the bridge server and more.
+Packages contained by this package provide client libraries for accessing the ecosystem of DigitalBits services.  At present, it only contains a simple horizon client library, but in the future it will contain clients to interact with digitalbits-core, federation, the bridge server and more.
 
-See [godoc](https://godoc.org/github.com/stellar/go/clients) for details about each package.
+See [godoc](https://godoc.org/github.com/digitalbitsorg/go/clients) for details about each package.
 
 ## Adding new client packages
 

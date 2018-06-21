@@ -15,17 +15,17 @@ import (
 )
 
 // Client represents a client that is capable of communicating with a
-// stellar-core server using HTTP
+// digitalbits-core server using HTTP
 type Client struct {
-	// HTTP is the client to use when communicating with stellar-core.  If nil,
+	// HTTP is the client to use when communicating with digitalbits-core.  If nil,
 	// http.DefaultClient will be used.
 	HTTP HTTP
 
-	// URL of Stellar Core server to connect.
+	// URL of DigitalBits Core server to connect.
 	URL string
 }
 
-// Info calls the `info` command on the connected stellar core and returns the
+// Info calls the `info` command on the connected digitalbits core and returns the
 // provided response
 func (c *Client) Info(ctx context.Context) (resp *InfoResponse, err error) {
 	req, err := c.simpleGet(ctx, "info", nil)
@@ -51,7 +51,7 @@ func (c *Client) Info(ctx context.Context) (resp *InfoResponse, err error) {
 	return
 }
 
-// SetCursor calls the `setcursor` command on the connected stellar core
+// SetCursor calls the `setcursor` command on the connected digitalbits core
 func (c *Client) SetCursor(ctx context.Context, id string, cursor int32) error {
 	req, err := c.simpleGet(ctx, "setcursor", url.Values{
 		"id":     []string{id},
@@ -75,13 +75,13 @@ func (c *Client) SetCursor(ctx context.Context, id string, cursor int32) error {
 
 	body := strings.TrimSpace(string(raw))
 	if body != SetCursorDone {
-		return errors.Errorf("failed to set cursor on stellar-core: %s", body)
+		return errors.Errorf("failed to set cursor on digitalbits-core: %s", body)
 	}
 
 	return nil
 }
 
-// WaitForNetworkSync continually polls the connected stellar-core until it
+// WaitForNetworkSync continually polls the connected digitalbits-core until it
 // receives a response that indicated the node has synced with the network
 func (c *Client) WaitForNetworkSync(ctx context.Context) error {
 	for {
@@ -113,7 +113,7 @@ func (c *Client) http() HTTP {
 	return c.HTTP
 }
 
-// simpleGet returns a new GET request to the connected stellar-core using the
+// simpleGet returns a new GET request to the connected digitalbits-core using the
 // provided path and query values to construct the result.
 func (c *Client) simpleGet(
 	ctx context.Context,

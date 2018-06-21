@@ -4,12 +4,12 @@ import (
 	"log"
 
 	"github.com/spf13/cobra"
-	"github.com/digitalbitsorg/go/tools/stellar-hd-wallet/commands"
+	"github.com/digitalbitsorg/go/tools/xdb-hd-wallet/commands"
 )
 
 var mainCmd = &cobra.Command{
-	Use:   "stellar-hd-wallet",
-	Short: "Simple HD wallet for Stellar Lumens. THIS PROGRAM IS STILL EXPERIMENTAL. USE AT YOUR OWN RISK.",
+	Use:   "xdb-hd-wallet",
+	Short: "Simple HD wallet for DigitalBits. THIS PROGRAM IS STILL EXPERIMENTAL. USE AT YOUR OWN RISK.",
 }
 
 func init() {

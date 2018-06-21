@@ -1,7 +1,7 @@
 ---
 title: Operation Details
 clientData:
-  laboratoryUrl: https://www.stellar.org/laboratory/#explorer?resource=operations&endpoint=single
+  laboratoryUrl: https://developer.digitalbits.io/lab/#explorer?resource=operations&endpoint=single
 ---
 
 The operation details endpoint provides information on a single [operation](../resources/operation.md). The operation ID provided in the `id` argument specifies which operation to load.
@@ -21,14 +21,14 @@ GET /operations/{id}
 ### curl Example Request
 
 ```sh
-curl https://horizon-testnet.stellar.org/operations/77309415424
+curl https://horizon.testnet.digitalbits.io/operations/77309415424
 ```
 
 ### JavaScript Example Request
 
 ```js
-var StellarSdk = require('stellar-sdk');
-var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+var DigitalBitsSdk = require('digitalbits-sdk');
+var server = new DigitalBitsSdk.Server('https://horizon.testnet.digitalbits.io');
 
 server.operations()
   .operation('77309415424')

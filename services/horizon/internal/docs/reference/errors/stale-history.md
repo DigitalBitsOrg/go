@@ -19,12 +19,12 @@ As with all errors Horizon returns, `stale_history` follows the [Problem Details
 ## Example
 
 ```shell
-$ curl -X GET "https://horizon-testnet.stellar.org/transactions?cursor=1&order=desc"
+$ curl -X GET "https://horizon.testnet.digitalbits.io/transactions?cursor=1&order=desc"
 {
   "type": "stale_history",
   "title": "Historical DB Is Too Stale",
   "status": 503,
-  "detail": "This horizon instance is configured to reject client requests when it can determine that the history database is lagging too far behind the connected instance of stellar-core.  If you operate this server, please ensure that the ingestion system is properly running.",
-  "instance": "horizon-testnet-001.prd.stellar001.internal.stellar-ops.com/ngUFNhn76T-078058"
+  "detail": "This horizon instance is configured to reject client requests when it can determine that the history database is lagging too far behind the connected instance of digitalbits-core.  If you operate this server, please ensure that the ingestion system is properly running.",
+  "instance": "node0.horizon.testnet.digitalbits.io/ngUFNhn76T-078058"
 }
 ```

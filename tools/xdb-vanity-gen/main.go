@@ -44,7 +44,7 @@ func main() {
 }
 
 func usage() {
-	fmt.Printf("Usage:\n\tstellar-vanity-gen PREFIX\n")
+	fmt.Printf("Usage:\n\txdb-vanity-gen PREFIX\n")
 }
 
 // aborts the attempt if a desired character is not a valid base32 digit

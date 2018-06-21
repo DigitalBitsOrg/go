@@ -58,7 +58,7 @@ func ExampleClient_SubmitTransaction() {
 
 func TestHorizon(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Package: github.com/stellar/go/horizon")
+	RunSpecs(t, "Package: github.com/digitalbitsorg/go/horizon")
 }
 
 var _ = Describe("Horizon", func() {

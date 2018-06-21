@@ -1,6 +1,6 @@
-// Package address provides utility functions for working with stellar
-// addresses. See https://www.stellar.org/developers/guides/concepts/federation.
-// html#stellar-addresses for more on addresses.
+// Package address provides utility functions for working with digitalbits
+// addresses. See https://developer.digitalbits.io/guides/concepts/federation.
+// html#digitalbits-addresses for more on addresses.
 package address
 
 import (

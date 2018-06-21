@@ -1,18 +1,18 @@
 ---
 title: Post Transaction
 clientData:
-  laboratoryUrl: https://www.stellar.org/laboratory/#explorer?resource=transactions&endpoint=create
+  laboratoryUrl: https://developer.digitalbits.io/lab/#explorer?resource=transactions&endpoint=create
 ---
 
-Posts a new [transaction](../resources/transaction.md) to the Stellar Network.
+Posts a new [transaction](../resources/transaction.md) to the DigitalBits Network.
 Note that creating a valid transaction and signing it properly is the
 responsibility of your client library.
 
 Transaction submission and the subsequent validation and inclusion into the
-Stellar Network's ledger is a [complicated and asynchronous
-process](https://www.stellar.org/developers/learn/concepts/transactions.html#life-cycle).
+DigitalBits Network's ledger is a [complicated and asynchronous
+process](https://developer.digitalbits.io/learn/concepts/transactions.html#life-cycle).
 To reduce the complexity, horizon manages these asynchronous processes for the
-client and will wait to hear results from the Stellar Network before returning
+client and will wait to hear results from the DigitalBits Network before returning
 an HTTP response to a client.
 
 Transaction submission to horizon aims to be
@@ -24,7 +24,7 @@ and not attempt to submit the transaction again. Only in cases where a
 transaction's status is unknown (and thus will have a chance of being included
 into a ledger) will a resubmission to the network occur.
 
-Information about [building transactions](https://www.stellar.org/developers/js-stellar-base/learn/building-transactions.html) in JavaScript.
+Information about [building transactions](https://developer.digitalbits.io/js-digitalbits-base/learn/building-transactions.html) in JavaScript.
 
 ## Request
 
@@ -44,7 +44,7 @@ POST /transactions
 ```sh
 curl -X POST \
      -F "tx=AAAAAOo1QK/3upA74NLkdq4Io3DQAQZPi4TVhuDnvCYQTKIVAAAACgAAH8AAAAABAAAAAAAAAAAAAAABAAAAAQAAAADqNUCv97qQO+DS5HauCKNw0AEGT4uE1Ybg57wmEEyiFQAAAAEAAAAAZc2EuuEa2W1PAKmaqVquHuzUMHaEiRs//+ODOfgWiz8AAAAAAAAAAAAAA+gAAAAAAAAAARBMohUAAABAPnnZL8uPlS+c/AM02r4EbxnZuXmP6pQHvSGmxdOb0SzyfDB2jUKjDtL+NC7zcMIyw4NjTa9Ebp4lvONEf4yDBA==" \
-  "https://horizon-testnet.stellar.org/transactions"
+  "https://horizon.testnet.digitalbits.io/transactions"
 ```
 
 ## Response

@@ -35,7 +35,7 @@ var NewCmd = &cobra.Command{
 		println("WARNING! If you lose your words, you will lose access to funds in all derived accounts!")
 		println("WARNING! Anyone who has access to these words can spend your funds!")
 		println("")
-		println("Use: `stellar-hd-wallet accounts` command to see generated accounts.")
+		println("Use: `xdb-hd-wallet accounts` command to see generated accounts.")
 
 		return nil
 	},

@@ -1,7 +1,7 @@
 ---
 title: Operations for Ledger
 clientData:
-  laboratoryUrl: https://www.stellar.org/laboratory/#explorer?resource=operations&endpoint=for_ledger
+  laboratoryUrl: https://developer.digitalbits.io/lab/#explorer?resource=operations&endpoint=for_ledger
 ---
 
 This endpoint returns all [operations](../resources/operation.md) that occurred in a given [ledger](../resources/ledger.md).
@@ -24,14 +24,14 @@ GET /ledgers/{id}/operations{?cursor,limit,order}
 ### curl Example Request
 
 ```sh
-curl "https://horizon-testnet.stellar.org/ledgers/69859/operations"
+curl "https://horizon.testnet.digitalbits.io/ledgers/69859/operations"
 ```
 
 ### JavaScript Example Request
 
 ```js
-var StellarSdk = require('stellar-sdk');
-var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+var DigitalBitsSdk = require('digitalbits-sdk');
+var server = new DigitalBitsSdk.Server('https://horizon.testnet.digitalbits.io');
 
 server.operations()
   .forLedger("10866")

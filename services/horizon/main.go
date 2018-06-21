@@ -48,8 +48,8 @@ func init() {
 
 	rootCmd = &cobra.Command{
 		Use:   "horizon",
-		Short: "client-facing api server for the stellar network",
-		Long:  "client-facing api server for the stellar network",
+		Short: "client-facing api server for the DigitalBits network",
+		Long:  "client-facing api server for the DigitalBits network",
 		Run: func(cmd *cobra.Command, args []string) {
 			initApp(cmd, args)
 			app.Serve()
@@ -65,13 +65,13 @@ func init() {
 	rootCmd.Flags().String(
 		"stellar-core-db-url",
 		"",
-		"stellar-core postgres database to connect with",
+		"digitalbits-core postgres database to connect with",
 	)
 
 	rootCmd.Flags().String(
 		"stellar-core-url",
 		"",
-		"stellar-core to connect with (for http commands)",
+		"digitalbits-core to connect with (for http commands)",
 	)
 
 	rootCmd.Flags().Int(
@@ -137,7 +137,7 @@ func init() {
 	rootCmd.Flags().Bool(
 		"ingest",
 		false,
-		"causes this horizon process to ingest data from stellar-core into horizon's db",
+		"causes this horizon process to ingest data from digitalbits-core into horizon's db",
 	)
 
 	rootCmd.Flags().String(
@@ -155,7 +155,7 @@ func init() {
 	rootCmd.Flags().Uint(
 		"history-stale-threshold",
 		0,
-		"the maximum number of ledgers the history db is allowed to be out of date from the connected stellar-core db before horizon considers history stale",
+		"the maximum number of ledgers the history db is allowed to be out of date from the connected digitalbits-core db before horizon considers history stale",
 	)
 
 	rootCmd.AddCommand(dbCmd)

@@ -17,7 +17,7 @@ func (lb *LedgerBundle) Load(db *db.Session) error {
 		// Remove when Horizon is able to handle gaps in stellar-core DB.
 		// More info: https://github.com/stellar/go/issues/335
 		if err == sql.ErrNoRows {
-			return errors.New("Gap detected in stellar-core database. Please recreate Horizon DB.")
+			return errors.New("Gap detected in digitalbits-core database. Please recreate Horizon DB.")
 		}
 		return errors.Wrap(err, "failed to load header")
 	}

@@ -1,12 +1,12 @@
 ---
 title: Payments for Account
 clientData:
-  laboratoryUrl: https://www.stellar.org/laboratory/#explorer?resource=payments&endpoint=for_account
+  laboratoryUrl: https://developer.digitalbits.io/lab/#explorer?resource=payments&endpoint=for_account
 ---
 
 This endpoint responds with a collection of [Payment operations](../resources/operation.md) where the given [account](../resources/account.md) was either the sender or receiver.
 
-This endpoint can also be used in [streaming](../responses.md#streaming) mode so it is possible to use it to listen for new payments to or from an account as they get made in the Stellar network.
+This endpoint can also be used in [streaming](../responses.md#streaming) mode so it is possible to use it to listen for new payments to or from an account as they get made in the DigitalBits network.
 If called in streaming mode Horizon will start at the earliest known payment unless a `cursor` is set. In that case it will start from the `cursor`. You can also set `cursor` value to `now` to only stream payments created since your request time.
 
 ## Request
@@ -28,14 +28,14 @@ GET /accounts/{id}/payments{?cursor,limit,order}
 
 ```bash
 # Retrieve the 25 latest payments for a specific account.
-curl "https://horizon-testnet.stellar.org/account/GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ/payments?limit=25&order=desc"
+curl "https://horizon.testnet.digitalbits.io/account/GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ/payments?limit=25&order=desc"
 ```
 
 ### JavaScript Example Request
 
 ```js
-var StellarSdk = require('stellar-sdk');
-var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+var DigitalBitsSdk = require('digitalbits-sdk');
+var server = new DigitalBitsSdk.Server('https://horizon.testnet.digitalbits.io');
 
 server.payments()
   .forAccount("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ")

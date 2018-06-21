@@ -1,9 +1,9 @@
-# stellar-archivist
+# xdb-archivist
 
-This is a small tool, written in Go, for working with `stellar-core` history archives directly.
-It is a standalone tool that does not require `stellar-core`, or any other programs.
+This is a small tool, written in Go, for working with `digitalbits-core` history archives directly.
+It is a standalone tool that does not require `digitalbits-core`, or any other programs.
 
-It is much smaller and simpler than `stellar-core`, and is intended only for archive-maintenance tasks.
+It is much smaller and simpler than `digitalbits-core`, and is intended only for archive-maintenance tasks.
 
   - reporting the current state of an archive
   - mirroring archives, or portions of archives
@@ -14,17 +14,17 @@ It is much smaller and simpler than `stellar-core`, and is intended only for arc
 ## Installation
 
 ```
-$ go install github.com/digitalbitsorg/go/tools/stellar-archivist
+$ go install github.com/digitalbitsorg/go/tools/xdb-archivist
 ```
 
 ## Usage
 
 ```
-inspect stellar history archive
+inspect digitalbits history archive
 
 Usage:
-  stellar-archivist [flags]
-  stellar-archivist [command]
+  xdb-archivist [flags]
+  xdb-archivist [command]
 
 Available Commands:
   dumpxdr
@@ -37,7 +37,7 @@ Flags:
   -c, --concurrency int   number of files to operate on concurrently (default 32)
   -n, --dryrun            describe file-writes, but do not perform any
   -f, --force             overwrite existing files
-  -h, --help              help for stellar-archivist
+  -h, --help              help for xdb-archivist
       --high int          last ledger to act on (default 4294967295)
       --last int          number of recent ledgers to act on (default -1)
       --low int           first ledger to act on
@@ -47,12 +47,12 @@ Flags:
       --thorough          decode and re-encode all buckets
       --verify            verify file contents
 
-Use "stellar-archivist [command] --help" for more information about a command.
+Use "xdb-archivist [command] --help" for more information about a command.
 ```
 
 ## Specifying history archives
 
-Unlike `stellar-core`, `stellar-archivist` does not run subprocesses to access history archives;
+Unlike `digitalbits-core`, `xdb-archivist` does not run subprocesses to access history archives;
 instead it operates directly on history archives given by URLs. Currently it understands URLs
 of the following schemes:
 
@@ -70,7 +70,7 @@ thousands of files efficiently.
 
 ### S3 backend
 
-`stellar-archivist` supports reading from and writing to any S3-compatible storage.
+`xdb-archivist` supports reading from and writing to any S3-compatible storage.
 
 The following options are specific to S3 backend:
 
@@ -80,7 +80,7 @@ The following options are specific to S3 backend:
 For example, to check the current status of an archive in DigitalOcean Spaces (ams3 region):
 
 ```
-$ stellar-archivist status --s3endpoint ams3.digitaloceanspaces.com s3://bucketname/prefix
+$ xdb-archivist status --s3endpoint ams3.digitaloceanspaces.com s3://bucketname/prefix
 ```
 
 ## Examples of use
@@ -88,9 +88,9 @@ $ stellar-archivist status --s3endpoint ams3.digitaloceanspaces.com s3://bucketn
 ### Reporting the current status of an archive:
 
 ```
-$ stellar-archivist status http://s3-eu-west-1.amazonaws.com/history.stellar.org/prd/core-testnet/core_testnet_001
+$ xdb-archivist status http://s3-eu-west-1.amazonaws.com/digitalbits-history/testnet/node0
 
-       Archive: http://s3-eu-west-1.amazonaws.com/history.stellar.org/prd/core-testnet/core_testnet_001
+       Archive: http://s3-eu-west-1.amazonaws.com/digitalbits-history/testnet/node0
         Server: v0.4.0-34-g2f015f6
  CurrentLedger: 2470911 (0x0025b3ff)
 CurrentBuckets: ____####### (7 nonzero levels)
@@ -100,9 +100,9 @@ CurrentBuckets: ____####### (7 nonzero levels)
 
 ### Mirroring an archive
 ```
-$ stellar-archivist mirror http://s3-eu-west-1.amazonaws.com/history.stellar.org/prd/core-testnet/core_testnet_001 file://local-archive
+$ xdb-archivist mirror http://s3-eu-west-1.amazonaws.com/digitalbits-history/testnet/node0 file://local-archive
 
-2016/02/10 18:27:09 mirroring http://s3-eu-west-1.amazonaws.com/history.stellar.org/prd/core-testnet/core_testnet_001 -> file://local-archive
+2016/02/10 18:27:09 mirroring http://s3-eu-west-1.amazonaws.com/digitalbits-history/testnet/node0 -> file://local-archive
 2016/02/10 18:27:10 copying range [0x0000003f, 0x0025b3ff]
 2016/02/10 18:31:20 Copied 4096/38607 checkpoints (10.609475%), 10386 buckets
 2016/02/10 18:33:26 Copied 8192/38607 checkpoints (21.218950%), 11524 buckets
@@ -114,9 +114,9 @@ $ stellar-archivist mirror http://s3-eu-west-1.amazonaws.com/history.stellar.org
 
 ### Incremental update to a mirror
 ```
-$ stellar-archivist --last 1024 mirror http://s3-eu-west-1.amazonaws.com/history.stellar.org/prd/core-testnet/core_testnet_001 file://local-archive
+$ xdb-archivist --last 1024 mirror http://s3-eu-west-1.amazonaws.com/digitalbits-history/testnet/node0 file://local-archive
 
-2016/02/10 19:14:01 mirroring http://s3-eu-west-1.amazonaws.com/history.stellar.org/prd/core-testnet/core_testnet_001 -> file://local-archive
+2016/02/10 19:14:01 mirroring http://s3-eu-west-1.amazonaws.com/digitalbits-history/testnet/node0 -> file://local-archive
 2016/02/10 19:14:02 copying range [0x0025b23f, 0x0025b6bf]
 2016/02/10 19:14:02 skipping existing bucket/b9/d3/45/bucket-b9d345d89ffe039edba65387dbe3770e16e7bd2095159213eb1c2920988e30dd.xdr.gz
 2016/02/10 19:14:02 skipping existing bucket/5c/c7/45/bucket-5cc745c8b08784c031e821f3a34f943f77e82018c9f5ffffa7f8f314170e0139.xdr.gz
@@ -134,7 +134,7 @@ $ stellar-archivist --last 1024 mirror http://s3-eu-west-1.amazonaws.com/history
 ### Scanning an entire archive (for missing files)
 
 ```
-$ stellar-archivist scan file://local-archive
+$ xdb-archivist scan file://local-archive
 
 2016/02/10 19:01:57 Scanning checkpoint files in range: [0x0000003f, 0x0025b3ff]
 2016/02/10 19:01:57 Archive: 4077 history, 0 ledger, 0 transactions, 0 results, 0 scp
@@ -151,7 +151,7 @@ $ stellar-archivist scan file://local-archive
 ### Scanning a range of an archive
 
 ```
-$ stellar-archivist --last 4096 scan file://local-archive
+$ xdb-archivist --last 4096 scan file://local-archive
 
 2016/02/10 19:03:55 Scanning checkpoint files in range: [0x0025a37f, 0x0025b3ff]
 2016/02/10 19:03:55 Checkpoint files scanned with 0 errors
@@ -166,7 +166,7 @@ $ stellar-archivist --last 4096 scan file://local-archive
 2016/02/10 19:03:57 No checkpoint files missing in range [0x0025a37f, 0x0025b3ff]
 2016/02/10 19:03:57 No missing buckets referenced in range [0x0025a37f, 0x0025b3ff]
 
-$ stellar-archivist --low 1000000 --high 1006000 scan file://local-archive
+$ xdb-archivist --low 1000000 --high 1006000 scan file://local-archive
 
 2016/02/10 19:23:51 Scanning checkpoint files in range: [0x000f41ff, 0x000f59bf]
 2016/02/10 19:23:51 Checkpoint files scanned with 0 errors
@@ -186,7 +186,7 @@ $ stellar-archivist --low 1000000 --high 1006000 scan file://local-archive
 ### Scanning and verifying contents of files
 
 ```
-$ stellar-archivist --verify --last 4096 scan file://local-archive
+$ xdb-archivist --verify --last 4096 scan file://local-archive
 
 2016/02/10 19:05:29 Scanning checkpoint files in range: [0x0025a37f, 0x0025b3ff]
 2016/02/10 19:05:29 Checkpoint files scanned with 0 errors
@@ -214,7 +214,7 @@ $ cp -a local-archive broken-archive
 
 $ rm broken-archive/transactions/00/10/f7/*
 
-$ stellar-archivist repair file://local-archive file://broken-archive
+$ xdb-archivist repair file://local-archive file://broken-archive
 
 2016/02/10 19:10:53 repairing file://local-archive -> file://broken-archive
 2016/02/10 19:10:53 Starting scan for repair
@@ -242,7 +242,7 @@ $ stellar-archivist repair file://local-archive file://broken-archive
 ### Dumping an XDR file from an archive as JSON
 
 ```
- stellar-archivist dumpxdr local-archive/transactions//00/20/de/transactions-0020de7f.xdr.gz
+ xdb-archivist dumpxdr local-archive/transactions//00/20/de/transactions-0020de7f.xdr.gz
 
 {
     "LedgerSeq": 2154109,

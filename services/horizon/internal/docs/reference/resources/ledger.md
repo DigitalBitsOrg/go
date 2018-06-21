@@ -4,7 +4,7 @@ title: Ledger
 
 A **ledger** resource contains information about a given ledger.
 
-To learn more about the concept of ledgers in the Stellar network, take a look at the [Stellar ledger concept guide](https://www.stellar.org/developers/learn/concepts/ledger.html).
+To learn more about the concept of ledgers in the DigitalBits network, take a look at the [DigitalBits ledger concept guide](https://developer.digitalbits.io/learn/concepts/ledger.html).
 
 ## Attributes
 
@@ -23,7 +23,7 @@ To learn more about the concept of ledgers in the Stellar network, take a look a
 | base_fee                | number | The [fee] the network charges per operation in a transaction.                                                                 |
 | base_reserve            | string | The [reserve][fee] the network uses when calculating an account's minimum balance.                                            |
 | max_tx_set_size         | number | The maximum number of transactions validators have agreed to process in a given ledger.                                       |
-| protocol_version        | number | The protocol version that the stellar network was running when this ledger was committed.                                     |
+| protocol_version        | number | The protocol version that the DigitalBits network was running when this ledger was committed.                                     |
 | header_xdr              | string | A base64 encoded string of the raw `LedgerHeader` xdr struct for this ledger.                                                 |
 | base_fee_in_stroops     | number | The [fee] the network charges per operation in a transaction.  Expressed in stroops.                                          |
 | base_reserve_in_stroops | number | The [reserve][fee] the network uses when calculating an account's minimum balance. Expressed in stroops.                      |
@@ -90,5 +90,5 @@ To learn more about the concept of ledgers in the Stellar network, take a look a
 
 
 
-[inflation]: https://www.stellar.org/developers/learn/concepts/inflation.html
-[fee]: https://www.stellar.org/developers/learn/concepts/fees.html
+[inflation]: https://developer.digitalbits.io/learn/concepts/inflation.html
+[fee]: https://developer.digitalbits.io/learn/concepts/fees.html

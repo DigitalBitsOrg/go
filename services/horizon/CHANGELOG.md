@@ -31,7 +31,7 @@ bumps.  A breaking change will get clearly notified in this log.
 - The ingestion system can now properly import envelopes that contain signatures that are zero-length strings.
 - BREAKING CHANGE: specifying a `limit` of `0` now triggers an error instead of interpreting the value to mean "use the default limit".
 - Requests that ask for more records than the maximum page size now trigger a bad request error, instead of an internal server error.
-- Upstream bug fixes to xdr decoding from `github.com/stellar/go`.
+- Upstream bug fixes to xdr decoding from `github.com/digitalbitsorg/go`.
 
 ### Changed
 
@@ -202,21 +202,21 @@ This release contains the initial implementation of the "Abridged History System
 ### Added
 - Github releases are created from tagged travis builds automatically
 
-[Unreleased]: https://github.com/stellar/horizon/compare/v0.11.0...master
-[v0.11.0]: https://github.com/stellar/horizon/compare/v0.10.1...v0.11.0
-[v0.10.1]: https://github.com/stellar/horizon/compare/v0.10.0...v0.10.1
-[v0.10.0]: https://github.com/stellar/horizon/compare/v0.9.1...v0.10.0
-[v0.9.1]: https://github.com/stellar/horizon/compare/v0.9.0...v0.9.1
-[v0.9.0]: https://github.com/stellar/horizon/compare/v0.8.0...v0.9.0
-[v0.8.0]: https://github.com/stellar/horizon/compare/v0.7.1...v0.8.0
-[v0.7.1]: https://github.com/stellar/horizon/compare/v0.7.0...v0.7.1
-[v0.7.0]: https://github.com/stellar/horizon/compare/v0.6.2...v0.7.0
-[v0.6.2]: https://github.com/stellar/horizon/compare/v0.6.1...v0.6.2
-[v0.6.1]: https://github.com/stellar/horizon/compare/v0.6.0...v0.6.1
-[v0.6.0]: https://github.com/stellar/horizon/compare/v0.5.1...v0.6.0
-[v0.5.1]: https://github.com/stellar/horizon/compare/v0.5.0...v0.5.1
-[v0.5.0]: https://github.com/stellar/horizon/compare/v0.4.0...v0.5.0
-[v0.4.0]: https://github.com/stellar/horizon/compare/v0.3.0...v0.4.0
-[v0.3.0]: https://github.com/stellar/horizon/compare/v0.2.0...v0.3.0
-[v0.2.0]: https://github.com/stellar/horizon/compare/v0.1.1...v0.2.0
-[v0.1.1]: https://github.com/stellar/horizon/compare/v0.1.0...v0.1.1
+[Unreleased]: https://github.com/digitalbitsorg/horizon/compare/v0.11.0...master
+[v0.11.0]: https://github.com/digitalbitsorg/horizon/compare/v0.10.1...v0.11.0
+[v0.10.1]: https://github.com/digitalbitsorg/horizon/compare/v0.10.0...v0.10.1
+[v0.10.0]: https://github.com/digitalbitsorg/horizon/compare/v0.9.1...v0.10.0
+[v0.9.1]: https://github.com/digitalbitsorg/horizon/compare/v0.9.0...v0.9.1
+[v0.9.0]: https://github.com/digitalbitsorg/horizon/compare/v0.8.0...v0.9.0
+[v0.8.0]: https://github.com/digitalbitsorg/horizon/compare/v0.7.1...v0.8.0
+[v0.7.1]: https://github.com/digitalbitsorg/horizon/compare/v0.7.0...v0.7.1
+[v0.7.0]: https://github.com/digitalbitsorg/horizon/compare/v0.6.2...v0.7.0
+[v0.6.2]: https://github.com/digitalbitsorg/horizon/compare/v0.6.1...v0.6.2
+[v0.6.1]: https://github.com/digitalbitsorg/horizon/compare/v0.6.0...v0.6.1
+[v0.6.0]: https://github.com/digitalbitsorg/horizon/compare/v0.5.1...v0.6.0
+[v0.5.1]: https://github.com/digitalbitsorg/horizon/compare/v0.5.0...v0.5.1
+[v0.5.0]: https://github.com/digitalbitsorg/horizon/compare/v0.4.0...v0.5.0
+[v0.4.0]: https://github.com/digitalbitsorg/horizon/compare/v0.3.0...v0.4.0
+[v0.3.0]: https://github.com/digitalbitsorg/horizon/compare/v0.2.0...v0.3.0
+[v0.2.0]: https://github.com/digitalbitsorg/horizon/compare/v0.1.1...v0.2.0
+[v0.1.1]: https://github.com/digitalbitsorg/horizon/compare/v0.1.0...v0.1.1

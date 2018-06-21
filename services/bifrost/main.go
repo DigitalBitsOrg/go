@@ -31,7 +31,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "bifrost",
-	Short: "Bridge server to allow participating in Stellar based ICOs using Bitcoin and Ethereum",
+	Short: "Bridge server to allow participating in DigitalBits-based tokens using Bitcoin and Ethereum",
 }
 
 var serverCmd = &cobra.Command{

@@ -201,7 +201,7 @@ func (i *System) Tick() *Session {
 	return is
 }
 
-// run causes the importer to check stellar-core to see if we can import new
+// run causes the importer to check digitalbits-core to see if we can import new
 // data.
 func (i *System) runOnce() {
 	defer func() {
@@ -235,7 +235,7 @@ func (i *System) runOnce() {
 	}
 
 	if ls.CoreLatest == 1 {
-		log.Warn("ingest: waiting for stellar-core sync")
+		log.Warn("ingest: waiting for digitalbits-core sync")
 		return
 	}
 
@@ -267,8 +267,8 @@ func (i *System) runOnce() {
 
 // trimAbandondedLedgers deletes all "abandonded" ledgers from the history
 // database. An abandonded ledger, in this context, means a ledger known to
-// horizon but is no longer present in the stellar-core database source.  The
-// usual cause for this situation is a stellar-core that uses the CATCHUP_RECENT
+// horizon but is no longer present in the digitalbits-core database source.  The
+// usual cause for this situation is a digitalbits-core that uses the CATCHUP_RECENT
 // mode.
 func (i *System) trimAbandondedLedgers() error {
 	var coreElder int32

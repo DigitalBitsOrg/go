@@ -2,11 +2,11 @@
 title: Asset
 ---
 
-**Assets** are the units that are traded on the Stellar Network.
+**Assets** are the units that are traded on the DigitalBits Network.
 
 An asset consists of an type, code, and issuer.
 
-To learn more about the concept of assets in the Stellar network, take a look at the [Stellar assets concept guide](https://www.stellar.org/developers/guides/concepts/assets.html).
+To learn more about the concept of assets in the DigitalBits network, take a look at the [DigitalBits assets concept guide](https://developer.digitalbits.io/guides/concepts/assets.html).
 
 ## Attributes
 
@@ -23,7 +23,7 @@ To learn more about the concept of assets in the Stellar network, take a look at
 ## Links
 
 |  rel  |    Example                                        |    Description    |
-| toml  | `https://www.stellar.org/.well-known/stellar.toml`| Link to the TOML file for this issuer |
+| toml  | `https://digitalbits.io/.well-known/digitalbits.toml`| Link to the TOML file for this issuer |
 
 ## Example
 
@@ -31,7 +31,7 @@ To learn more about the concept of assets in the Stellar network, take a look at
 {
   "_links": {
     "toml": {
-      "href": "https://www.stellar.org/.well-known/stellar.toml"
+      "href": "https://digitalbits.io/.well-known/digitalbits.toml"
     }
   },
   "asset_type": "credit_alphanum4",

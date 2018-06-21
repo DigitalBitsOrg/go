@@ -16,9 +16,10 @@ Horizon uses two go tools you'll need to install:
 1. [go-bindata](https://github.com/jteeuwen/go-bindata) is used to bundle test data
 1. [go-codegen](https://github.com/nullstyle/go-codegen) is used to generate some boilerplate code
 
-After the above are installed, simply run `go generate github.com/stellar/go/services/horizon/...`.
+After the above are installed, simply run `go generate github.com/digitalbitsorg/go/services/horizon/...`.
 
 ## <a name="tests"></a> Running Tests
+
 
 start a redis server on port `6379`
 
@@ -26,7 +27,7 @@ start a redis server on port `6379`
 redis-server
 ```
 
-then, run the all the go tests like so (assuming you are at stellar/go):
+then, run the all the go tests like so (assuming you are at digitalbitsorg/go):
 
 ```bash
 bash ./support/scripts/run_tests
@@ -35,12 +36,12 @@ bash ./support/scripts/run_tests
 or just run horizon tests like so:
 
 ```bash
-go test github.com/stellar/go/services/horizon/...
+go test github.com/digitalbitsorg/go/services/horizon/...
 ```
 
 ## <a name="logging"></a> Logging
 
-All logging infrastructure is in the `github.com/stellar/go/tree/master/services/horizon/internal/log` package.  This package provides "level-based" logging:  Each logging statement has a severity, one of "Debug", "Info", "Warn", "Error" or "Panic".  The horizon server has a configured level "filter", specified either using the `--log-level` command line flag or the `LOG_LEVEL` environment variable.  When a logging statement is executed, the statements declared severity is checked against the filter and will only be emitted if the severity of the statement is equal or higher severity than the filter.
+All logging infrastructure is in the `github.com/digitalbitsorg/go/tree/master/services/horizon/internal/log` package.  This package provides "level-based" logging:  Each logging statement has a severity, one of "Debug", "Info", "Warn", "Error" or "Panic".  The horizon server has a configured level "filter", specified either using the `--log-level` command line flag or the `LOG_LEVEL` environment variable.  When a logging statement is executed, the statements declared severity is checked against the filter and will only be emitted if the severity of the statement is equal or higher severity than the filter.
 
 In addition, the logging subsystem has support for fields: Arbitrary key-value pairs that will be associated with an entry to allow for filtering and additional contextual information.
 

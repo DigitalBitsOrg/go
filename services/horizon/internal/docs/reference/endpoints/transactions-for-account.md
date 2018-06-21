@@ -1,11 +1,11 @@
 ---
 title: Transactions for Account
 clientData:
-  laboratoryUrl: https://www.stellar.org/laboratory/#explorer?resource=transactions&endpoint=for_account
+  laboratoryUrl: https://developer.digitalbits.io/lab/#explorer?resource=transactions&endpoint=for_account
 ---
 
 This endpoint represents all [transactions](../resources/transaction.md) that affected a given [account](../resources/account.md).
-This endpoint can also be used in [streaming](../responses.md#streaming) mode so it is possible to use it to listen for new transactions as that affect a given account as they get made in the Stellar network.
+This endpoint can also be used in [streaming](../responses.md#streaming) mode so it is possible to use it to listen for new transactions as that affect a given account as they get made in the DigitalBits network.
 If called in streaming mode Horizon will start at the earliest known transaction unless a `cursor` is set. In that case it will start from the `cursor`. You can also set `cursor` value to `now` to only stream transaction created since your request time.
 
 ## Request
@@ -26,14 +26,14 @@ GET /accounts/{account_id}/transactions{?cursor,limit,order}
 ### curl Example Request
 
 ```sh
-curl "https://horizon-testnet.stellar.org/accounts/GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ/transactions?limit=1"
+curl "https://horizon.testnet.digitalbits.io/accounts/GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ/transactions?limit=1"
 ```
 
 ### JavaScript Example Request
 
 ```js
-var StellarSdk = require('stellar-sdk');
-var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+var DigitalBitsSdk = require('digitalbits-sdk');
+var server = new DigitalBitsSdk.Server('https://horizon.testnet.digitalbits.io');
 
 server.transactions()
   .forAccount("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ")
@@ -49,8 +49,8 @@ server.transactions()
 ### JavaScript Example Request
 
 ```js
-var StellarSdk = require('stellar-sdk');
-var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+var DigitalBitsSdk = require('digitalbits-sdk');
+var server = new DigitalBitsSdk.Server('https://horizon.testnet.digitalbits.io');
 
 server.transactions()
   .forAccount("GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ")

@@ -12,7 +12,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/digitalbitsorg/go/tools/stellar-archivist/internal"
+	"github.com/digitalbitsorg/go/tools/xdb-archivist/internal"
 )
 
 func status(a string, opts *Options) {
@@ -109,8 +109,8 @@ func main() {
 	var opts Options
 
 	rootCmd := &cobra.Command{
-		Use:   "stellar-archivist",
-		Short: "inspect stellar history archive",
+		Use:   "xdb-archivist",
+		Short: "inspect xdb history archive",
 		Run: func(cmd *cobra.Command, args []string) {
 			cmd.Help()
 			os.Exit(0)
