@@ -57,7 +57,7 @@ If called normally this endpoint responds with a [page](../resources/page.md) of
       {
         "_links": {
           "toml": {
-            "href": "https://www.stellar.org/.well-known/stellar.toml"
+            "href": "https://www.stellar.org/.well-known/digitalbits.toml"
           }
         },
         "asset_type": "credit_alphanum12",
@@ -74,7 +74,7 @@ If called normally this endpoint responds with a [page](../resources/page.md) of
       {
         "_links": {
           "toml": {
-            "href": "https://www.stellar.org/.well-known/stellar.toml"
+            "href": "https://www.stellar.org/.well-known/digitalbits.toml"
           }
         },
         "asset_type": "credit_alphanum4",
@@ -91,7 +91,7 @@ If called normally this endpoint responds with a [page](../resources/page.md) of
       {
         "_links": {
           "toml": {
-            "href": "https://www.stellar.org/.well-known/stellar.toml"
+            "href": "https://www.stellar.org/.well-known/digitalbits.toml"
           }
         },
         "asset_type": "credit_alphanum4",
