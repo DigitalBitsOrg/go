@@ -2,6 +2,7 @@ package resource
 
 import (
 	"github.com/digitalbitsorg/go/services/horizon/internal/render/hal"
+	"github.com/digitalbitsorg/go/services/horizon/internal/httpx"
 	"github.com/digitalbitsorg/go/services/horizon/internal/txsub"
 	"golang.org/x/net/context"
 )

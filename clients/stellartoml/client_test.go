@@ -48,14 +48,14 @@ func TestClient(t *testing.T) {
 
 	// not found
 	h.
-		On("GET", "https://missing2.org/.well-known/stellar.toml").
+		On("GET", "https://missing2.org/.well-known/digitalbits.toml").
 		ReturnNotFound()
 	stoml, err = c.GetStellarToml("missing2.org")
 	assert.EqualError(t, err, "http request failed with non-200 status code")
 
 	// invalid toml
 	h.
-		On("GET", "https://json2.org/.well-known/stellar.toml").
+		On("GET", "https://json2.org/.well-known/digitalbits.toml").
 		ReturnJSON(http.StatusOK, map[string]string{"hello": "world"})
 	stoml, err = c.GetStellarToml("json2.org")
 
