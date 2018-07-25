@@ -19,7 +19,7 @@ script:
 - glide install
 - ./support/scripts/run_tests
 
-script: travis_wait 60 go/services/bifrost/deploy.sh
+script: travis_wait 60 services/bifrost/deploy.sh
 
 #before_deploy:
 #- go run ./support/scripts/build_release_artifacts/main.go
