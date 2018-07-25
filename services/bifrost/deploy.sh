@@ -1,8 +1,18 @@
-#!/bin/bash
+#!/bin/sh
 
-mkdir -p /tmp/build
-make DESTDIR=/tmp/build install
+if [ $BUILD_FROM_SRC -gt 0 ]
+then
+  # deploy horizon binary
+  mkdir -p /go/src/github.com/digitalbits/go \
+    && git clone --depth 1 --branch master git@github.com:DigitalBitsOrg/go.git /go/src/github.com/digitalbits/go \
+    && cd /go/src/github.com/digitalbits/go \
+    && curl https://glide.sh/get | sh \
+    && glide install \
+    && go install github.com/digitalbits/go/services/bifrost
 
+  mv /go/bin/bifrost /usr/local/bin \
+  && chmod +x /usr/local/bin/bifrost
+  echo "\nDone installing stellar-core...\n"
 
 apt-get update -y 
 apt-get install ruby-dev build-essential -y
@@ -10,11 +20,11 @@ gem install fpm
 
 echo "Create deb package..."
 
-fpm -s dir -t deb -C /tmp/build --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
+fpm -s dir -t deb -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
 
 echo "Create rpm package..."
 
-fpm -s dir -t rpm -C /tmp/build --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
+fpm -s dir -t rpm -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
 
 echo "deploying to Cloudsmith with cloudsmith-cli"
 
