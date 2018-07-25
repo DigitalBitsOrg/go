@@ -12,7 +12,6 @@ then
 
   mv /go/bin/bifrost /usr/local/bin \
   && chmod +x /usr/local/bin/bifrost
-  echo "\nDone installing stellar-core...\n"
 
 apt-get update -y 
 apt-get install ruby-dev build-essential -y
