@@ -42,7 +42,6 @@ ls
 cloudsmith push deb digitalbits/dbtest/ubuntu/trusty bifrost_0.1.0-1_amd64.deb
 cloudsmith push rpm digitalbits/dbtest/el/7 bifrost-0.1.0-1.x86_64.rpm 
 
-
 cloudsmith push deb digitalbits/dbtest/ubuntu/trusty federation_0.1.0-1_amd64.deb
 cloudsmith push rpm digitalbits/dbtest/el/7 federation-0.1.0-1.x86_64.rpm 
 
