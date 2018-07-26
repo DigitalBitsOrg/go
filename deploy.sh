@@ -32,8 +32,8 @@ fpm -s dir -t deb -C /usr/local/bin/horizon --name horizon --version 0.1.0 --ite
 echo "Create rpm package..."
 
 fpm --verbose -s dir -t rpm -C ~/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
-#fpm -s dir -t rpm -C /usr/local/bin/federation --name federation --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-federation" .
-#fpm -s dir -t rpm -C /usr/local/bin/horizon --name horizon --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-horizon" .
+fpm -s dir -t rpm -C /usr/local/bin/federation --name federation --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-federation" .
+fpm -s dir -t rpm -C /usr/local/bin/horizon --name horizon --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-horizon" .
 echo "deploying to Cloudsmith with cloudsmith-cli"
 
 ls
