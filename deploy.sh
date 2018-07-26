@@ -27,12 +27,12 @@ gem install fpm
 
 echo "Create deb package..."
 
-fpm -s dir -t deb -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
+sudo fpm -s dir -t deb -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
 #fpm -s dir -t deb -C /usr/local/bin/federation --name federation --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-federation" .
 #fpm -s dir -t deb -C /usr/local/bin/horizon --name horizon --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-horizon" .
 echo "Create rpm package..."
 
-fpm -s dir -t rpm -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
+sudo fpm -s dir -t rpm -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
 #fpm -s dir -t rpm -C /usr/local/bin/federation --name federation --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-federation" .
 #fpm -s dir -t rpm -C /usr/local/bin/horizon --name horizon --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-horizon" .
 echo "deploying to Cloudsmith with cloudsmith-cli"
