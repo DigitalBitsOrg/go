@@ -21,8 +21,8 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
     
 #  mv /go/bin/horizon /usr/local/bin \
 #  && chmod +x /usr/local/bin/horizon
-
-apt-get install ruby-dev build-essential -y
+sudo apt-get update -y
+sudo apt-get install ruby-dev build-essential -y
 gem install fpm
 
 echo "Create deb package..."
