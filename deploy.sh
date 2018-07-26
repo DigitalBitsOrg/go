@@ -14,21 +14,21 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
 
 sudo mv /go/bin/bifrost /usr/local/bin \
   && sudo chmod +x /usr/local/bin/bifrost \
-  && sudo cp /usr/local/bin/bifrost ~/
 #fi
-#  mv /go/bin/federation /usr/local/bin \
-#  && chmod +x /usr/local/bin/federation
+  && sudo mv /go/bin/federation /usr/local/bin \
+  && sudo chmod +x /usr/local/bin/federation \
     
-#  mv /go/bin/horizon /usr/local/bin \
-#  && chmod +x /usr/local/bin/horizon
+  && sudo mv /go/bin/horizon /usr/local/bin \
+  && chmod +x /usr/local/bin/horizon 
+  
 sudo apt-get update -y
 sudo apt-get install ruby-dev build-essential -y
 gem install fpm
 
 echo "Create deb package..."
-fpm --verbose -s dir -t deb -C ~/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
-#fpm -s dir -t deb -C /usr/local/bin/federation --name federation --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-federation" .
-#fpm -s dir -t deb -C /usr/local/bin/horizon --name horizon --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-horizon" .
+fpm --verbose -s dir -t deb -C /usr/local/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
+fpm -s dir -t deb -C /usr/local/bin/federation --name federation --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-federation" .
+fpm -s dir -t deb -C /usr/local/bin/horizon --name horizon --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-horizon" .
 echo "Create rpm package..."
 
 fpm --verbose -s dir -t rpm -C ~/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
