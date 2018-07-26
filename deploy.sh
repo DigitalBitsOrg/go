@@ -22,7 +22,6 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
 #  mv /go/bin/horizon /usr/local/bin \
 #  && chmod +x /usr/local/bin/horizon
 
-apt-get update -y 
 apt-get install ruby-dev build-essential -y
 gem install fpm
 
