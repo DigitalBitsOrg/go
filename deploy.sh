@@ -8,13 +8,12 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
     && cd /go/src/github.com/digitalbits/go \
     && curl https://glide.sh/get | sh \
     && glide install \
-    && go install github.com/digitalbits/go/services/bifrost
-#    && go install github.com/digitalbits/go/services/federation
-#    && go install github.com/digitalbits/go/services/horizon
+    && go install github.com/digitalbits/go/services/bifrost \
+    && go install github.com/digitalbits/go/services/federation \
+    && go install github.com/digitalbits/go/services/horizon 
 
- ls -la /go/bin/bifrost
 sudo mv /go/bin/bifrost /usr/local/bin \
-  && sudo chmod +x /usr/local/bin/bifrost
+  && sudo chmod +x /usr/local/bin/bifrost \
   && sudo cp /usr/local/bin/bifrost ~/bifrost
 #fi
 #  mv /go/bin/federation /usr/local/bin \
