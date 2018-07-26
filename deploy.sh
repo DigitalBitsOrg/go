@@ -12,7 +12,7 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
 #    && go install github.com/digitalbits/go/services/federation
 #    && go install github.com/digitalbits/go/services/horizon
 
- ll /go/bin/bifrost
+ ls -la /go/bin/bifrost
 sudo mv /go/bin/bifrost /usr/local/bin \
   && sudo chmod +x /usr/local/bin/bifrost
 #fi
