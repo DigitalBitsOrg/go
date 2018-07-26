@@ -13,12 +13,12 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
     && go install github.com/digitalbits/go/services/horizon 
 
 sudo mv /go/bin/bifrost /usr/local/bin \
-  && sudo chmod +x /usr/local/bin/bifrost \
-#fi
-  && sudo mv /go/bin/federation /usr/local/bin \
-  && sudo chmod +x /usr/local/bin/federation \
-    
-  && sudo mv /go/bin/horizon /usr/local/bin \
+  && sudo chmod +x /usr/local/bin/bifrost 
+  
+sudo mv /go/bin/federation /usr/local/bin \
+  && sudo chmod +x /usr/local/bin/federation 
+
+sudo mv /go/bin/horizon /usr/local/bin \
   && chmod +x /usr/local/bin/horizon 
   
 sudo apt-get update -y
