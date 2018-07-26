@@ -28,6 +28,10 @@ matrix:
   allow_failures:
   - go: tip
 
+before_deploy:
+  - pyenv global 2.7
+  - pip install cloudsmith-cli
+
 deploy:
   provider: script
   skip_cleanup: true
