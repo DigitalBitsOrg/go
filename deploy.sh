@@ -14,7 +14,7 @@ sudo mkdir -p /go/src/github.com/digitalbits/go \
 
 sudo mv /go/bin/bifrost /usr/local/bin \
   && sudo chmod +x /usr/local/bin/bifrost \
-  && sudo cp /usr/local/bin/bifrost ~/bifrost
+  && sudo cp /usr/local/bin/bifrost ~/
 #fi
 #  mv /go/bin/federation /usr/local/bin \
 #  && chmod +x /usr/local/bin/federation
