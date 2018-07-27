@@ -3,22 +3,22 @@
 #if [ $BUILD_FROM_SRC -gt 0 ]
 #then
   # deploy horizon binary
-sudo mkdir -p /go/src/github.com/digitalbits/go \
-    && git clone --depth 1 --branch master git@github.com:DigitalBitsOrg/go.git /go/src/github.com/digitalbits/go \
-    && cd /go/src/github.com/digitalbits/go \
+sudo mkdir -p $GOPATH/src/github.com/digitalbits/go \
+    && git clone --depth 1 --branch master git@github.com:DigitalBitsOrg/go.git $GOPATH/src/github.com/digitalbits/go \
+    && cd $GOPATH/src/github.com/digitalbits/go \
     && curl https://glide.sh/get | sh \
     && glide install \
     && go install github.com/digitalbits/go/services/bifrost \
     && go install github.com/digitalbits/go/services/federation \
     && go install github.com/digitalbits/go/services/horizon 
 
-sudo mv /go/bin/bifrost /usr/local/bin \
+sudo mv $GOPATH/bin/bifrost /usr/local/bin \
   && sudo chmod +x /usr/local/bin/bifrost 
   
-sudo mv /go/bin/federation /usr/local/bin \
+sudo mv $GOPATH/bin/federation /usr/local/bin \
   && sudo chmod +x /usr/local/bin/federation 
 
-sudo mv /go/bin/horizon /usr/local/bin \
+sudo mv $GOPATH/bin/horizon /usr/local/bin \
   && chmod +x /usr/local/bin/horizon 
   
 sudo apt-get update -y
