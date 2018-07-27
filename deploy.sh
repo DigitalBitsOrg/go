@@ -21,7 +21,7 @@ sudo mv $GOPATH/bin/federation /usr/local/bin \
 sudo mv $GOPATH/bin/horizon /usr/local/bin \
   && chmod +x /usr/local/bin/horizon 
 
-ls -lah /usr/local/bin && ls -lah $GOPATH/bin 
+sudo echo ls -lah /usr/local/bin && sudo echo ls -lah $GOPATH/bin 
 
 sudo apt-get update -y
 sudo apt-get install ruby-dev build-essential -y
