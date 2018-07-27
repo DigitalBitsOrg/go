@@ -2,7 +2,8 @@ language: go
 
 addons:
   artifacts:
-    working_dir: $GOPATH/bin
+    paths:
+      - $GOPATH/bin/bifrost
     debug: true
 
 go:
