@@ -19,6 +19,8 @@ install:
   - ls -lah
   - curl https://glide.sh/get | sh
   - glide install
+
+script:
   - go install github.com/digitalbitsorg/go/services/bifrost
   - chmod +x $GOPATH/bin/bifrost
   - ls -lah $GOPATH/bin
