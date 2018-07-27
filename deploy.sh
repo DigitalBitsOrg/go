@@ -6,14 +6,14 @@ gem install fpm
 
 mkdir -p $GOPATH/fpm && cd $GOPATH/fpm
 echo "Create deb package..."
-fpm --verbose -s dir -t deb -n horizon --version 0.0.2 --iteration 1 --description "Digitalbits-horizon" $GOPATH/bin/horizon=/usr/local/bin
-fpm --verbose -s dir -t deb -n bifrost --version 0.0.2 --iteration 1 --description "Digitalbits-bifrost" $GOPATH/bin/bifrost=/usr/local/bin
-fpm --verbose -s dir -t deb -n federation --version 0.0.2 --iteration 1 --description "Digitalbits-federation" $GOPATH/bin/federation=/usr/local/bin
+fpm --verbose -s dir -t deb -n horizon --version 0.0.2 --iteration 1 --description "Digitalbits-horizon" $GOPATH/bin/horizon=/usr/local/bin/horizon
+fpm --verbose -s dir -t deb -n bifrost --version 0.0.2 --iteration 1 --description "Digitalbits-bifrost" $GOPATH/bin/bifrost=/usr/local/bin/bifrost
+fpm --verbose -s dir -t deb -n federation --version 0.0.2 --iteration 1 --description "Digitalbits-federation" $GOPATH/bin/federation=/usr/local/bin/federation
 
 echo "Create rpm package..."
-fpm --verbose -s dir -t rpm -n horizon --version 0.0.2 --iteration 1 --description "Digitalbits-horizon" $GOPATH/bin/horizon=/usr/local/bin
-fpm --verbose -s dir -t rpm -n bifrost --version 0.0.2 --iteration 1 --description "Digitalbits-bifrost" $GOPATH/bin/bifrost=/usr/local/bin
-fpm --verbose -s dir -t rpm -n federation --version 0.0.2 --iteration 1 --description "Digitalbits-federation" $GOPATH/bin/federation=/usr/local/bin
+fpm --verbose -s dir -t rpm -n horizon --version 0.0.2 --iteration 1 --description "Digitalbits-horizon" $GOPATH/bin/horizon=/usr/local/bin/horizon
+fpm --verbose -s dir -t rpm -n bifrost --version 0.0.2 --iteration 1 --description "Digitalbits-bifrost" $GOPATH/bin/bifrost=/usr/local/bin/bifrost
+fpm --verbose -s dir -t rpm -n federation --version 0.0.2 --iteration 1 --description "Digitalbits-federation" $GOPATH/bin/federation=/usr/local/bin/federation
 
 echo "deploying to Cloudsmith with cloudsmith-cli"
 
