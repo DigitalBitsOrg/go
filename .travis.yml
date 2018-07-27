@@ -6,16 +6,16 @@ addons:
     debug: true
 
 go:
-  - '1.10'
+  - '1.9'
+
+go_import_path: github.com/digitalbitsorg/go
+
 install:
-  - mkdir -p $GOPATH/src/github.com/stellar/go
-  - cp -Rf ./ $GOPATH/src/github.com/stellar/go
-  - cd $GOPATH/src/github.com/stellar/go
   - echo $PWD
   - ls -lah
   - curl https://glide.sh/get | sh
   - glide install
-  - go install github.com/stellar/go/services/bifrost
+  - go install github.com/digitalbitsorg/go/services/bifrost
   - chmod +x $GOPATH/bin/bifrost
   - ls -lah $GOPATH/bin
 
