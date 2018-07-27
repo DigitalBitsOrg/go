@@ -8,13 +8,9 @@ addons:
 go:
   - '1.10'
 install:
-  - mkdir -p /go/bin
-  - echo "export GOPATH=/go" >> /root/.profile
-  - echo 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin' >> /root/.profile
-  - source /root/.profile
-  - mkdir -p /go/src/github.com/stellar/
-  - cp -Rf ./ /go/src/github.com/stellar/go
-  - cd /go/src/github.com/stellar/go
+  - mkdir -p $GOPATH/src/github.com/stellar/go
+  - cp -Rf ./ $GOPATH/src/github.com/stellar/go
+  - cd $GOPATH/src/github.com/stellar/go
   - echo $PWD
   - ls -lah
   - curl https://glide.sh/get | sh
