@@ -15,15 +15,14 @@ install:
   - mkdir -p $GOPATH/src/github.com/digitalbitsorg/go
   - cp -Rf $GOPATH/tmp/* $GOPATH/src/github.com/digitalbitsorg/go && rm -Rf $GOPATH/tmp
   - cd $GOPATH/src/github.com/digitalbitsorg/go
-  - echo $PWD
-  - ls -lah
   - curl https://glide.sh/get | sh
   - glide install
 
 script:
   - go install github.com/digitalbitsorg/go/services/bifrost
   - chmod +x $GOPATH/bin/bifrost
-  - ls -lah $GOPATH/bin
+  - mkdir $GOPATH/bifrost
+  - cp $GOPATH/bin/bifrost $GOPATH/bifrost/bifrost
 
 matrix:
   fast_finish: true

@@ -1,31 +1,14 @@
 #!/bin/bash
 
-#  # deploy bifrost binary
-#mkdir -p $GOPATH/src/github.com/digitalbits/go \
-#    && echo $PWD \
-#    && ls -lah \
-#    && cp -Rf ./ $GOPATH/src/github.com/digitalbits/go \
-#    && cd $GOPATH/src/github.com/digitalbits/go \
-#    && curl https://glide.sh/get | sh \
-#    && glide install \
-#    && go install github.com/digitalbits/go/services/bifrost \
-#
-#mv $GOPATH/bin/bifrost /tmp \
-#  && sudo chmod +x /tmp/bifrost
-#
-#echo "Work!"
-#ls -lah /tmp && ls -lah $GOPATH/bin
-#echo "Work!"
-
 apt-get update -y
 apt-get install ruby-dev build-essential -y
 gem install fpm
 
 echo "Create deb package..."
-fpm --verbose -s dir -t deb -C $GOPATH/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
+fpm --verbose -s dir -t deb -C $GOPATH/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
 
 echo "Create rpm package..."
-fpm --verbose -s dir -t rpm -C $GOPATH/bin/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
+fpm --verbose -s dir -t rpm -C $GOPATH/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
 
 echo "deploying to Cloudsmith with cloudsmith-cli"
 
