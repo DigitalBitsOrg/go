@@ -7,15 +7,19 @@ addons:
 
 go:
   - '1.10'
-
-go_import_path: github.com/digitalbitsorg/go
-
 install:
+  - mkdir -p /go/bin
+  - echo "export GOPATH=/go" >> /root/.profile
+  - echo 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin' >> /root/.profile
+  - source /root/.profile
+  - mkdir -p /go/src/github.com/stellar/
+  - cp -Rf ./ /go/src/github.com/stellar/go
+  - cd /go/src/github.com/stellar/go
   - echo $PWD
   - ls -lah
   - curl https://glide.sh/get | sh
   - glide install
-  - go install github.com/digitalbitsorg/go/services/bifrost
+  - go install github.com/stellar/go/services/bifrost
   - chmod +x $GOPATH/bin/bifrost
   - ls -lah $GOPATH/bin
 
