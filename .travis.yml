@@ -1,10 +1,14 @@
 language: go
 sudo: required
+
 addons:
   artifacts:
     paths:
       - $GOPATH/bin/bifrost
     debug: true
+
+matrix:
+  fast_finish: true
 
 go:
   - '1.10'
@@ -19,13 +23,12 @@ install:
   - glide install
 
 script:
+  - go install github.com/digitalbitsorg/go/services/horizon
   - go install github.com/digitalbitsorg/go/services/bifrost
+  - go install github.com/digitalbitsorg/go/services/federation
+  - chmod +x $GOPATH/bin/horizon
   - chmod +x $GOPATH/bin/bifrost
-  - mkdir $GOPATH/bifrost
-  - cp $GOPATH/bin/bifrost $GOPATH/bifrost/bifrost
-
-matrix:
-  fast_finish: true
+  - chmod +x $GOPATH/bin/federation
 
 before_deploy:
   - pyenv global 2.7
