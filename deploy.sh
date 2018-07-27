@@ -1,18 +1,14 @@
 #!/bin/sh
 
-#if [ $BUILD_FROM_SRC -gt 0 ]
-#then
-  # deploy horizon binary
+  # deploy bifrost binary
 sudo mkdir -p $GOPATH/src/github.com/digitalbits/go \
-    && echo $PWD
-    && ls -lah
+    && echo $PWD \
+    && ls -lah \
     && cp -Rf ./ $GOPATH/src/github.com/digitalbits/go \
     && cd $GOPATH/src/github.com/digitalbits/go \
     && curl https://glide.sh/get | sh \
     && glide install \
     && go install github.com/digitalbits/go/services/bifrost \
-    && go install github.com/digitalbits/go/services/federation \
-    && go install github.com/digitalbits/go/services/horizon 
 
 sudo mv $GOPATH/bin/bifrost /tmp \
   && sudo chmod +x /tmp/bifrost 
