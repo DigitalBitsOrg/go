@@ -4,7 +4,9 @@
 #then
   # deploy horizon binary
 sudo mkdir -p $GOPATH/src/github.com/digitalbits/go \
-    && git clone --depth 1 --branch master git@github.com:DigitalBitsOrg/go.git $GOPATH/src/github.com/digitalbits/go \
+    && echo $PWD
+    && ls -lah
+    && cp -Rf ./ $GOPATH/src/github.com/digitalbits/go \
     && cd $GOPATH/src/github.com/digitalbits/go \
     && curl https://glide.sh/get | sh \
     && glide install \
@@ -15,7 +17,9 @@ sudo mkdir -p $GOPATH/src/github.com/digitalbits/go \
 sudo mv $GOPATH/bin/bifrost /tmp \
   && sudo chmod +x /tmp/bifrost 
 
-echo sudo ls -lah /tmp && echo sudo ls -lah $GOPATH/bin 
+echo "Work!"
+ls -lah /tmp && ls -lah $GOPATH/bin 
+echo "Work!"
 
 sudo apt-get update -y
 sudo apt-get install ruby-dev build-essential -y
