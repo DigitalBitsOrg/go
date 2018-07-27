@@ -5,10 +5,10 @@ apt-get install ruby-dev build-essential -y
 gem install fpm
 
 echo "Create deb package..."
-fpm --verbose -s file -t deb -C $GOPATH/bifrost/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends debian_dependency1 --description "Digitalbits-bifrost" .
+fpm --verbose -s dir -t deb -n bifrost --version 0.1.0 --iteration 1 --description "Digitalbits-bifrost" $GOPATH/bin/bifrost=/usr/local/bin
 
 echo "Create rpm package..."
-fpm --verbose -s file -t rpm -C $GOPATH/bifrost/bifrost --name bifrost --version 0.1.0 --iteration 1 --depends  redhat_dependency1 --description "digitalbits-bifrost" .
+fpm --verbose -s dir -t rpm -n bifrost --version 0.1.0 --iteration 1 --description "Digitalbits-bifrost" $GOPATH/bin/bifrost=/usr/local/bin
 
 echo "deploying to Cloudsmith with cloudsmith-cli"
 
