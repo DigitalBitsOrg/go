@@ -8,6 +8,8 @@ addons:
 go:
   - '1.10'
 
+go_import_path: github.com/DigitalBitsOrg/go
+
 install:
   - echo $PWD
   - ls -lah
