@@ -12,10 +12,10 @@ sudo mkdir -p $GOPATH/src/github.com/digitalbits/go \
     && go install github.com/digitalbits/go/services/federation \
     && go install github.com/digitalbits/go/services/horizon 
 
-sudo mv $GOPATH/bin/bifrost /usr/local/bin \
-  && sudo chmod +x /usr/local/bin/bifrost 
+sudo mv $GOPATH/bin/bifrost /tmp \
+  && sudo chmod +x /tmp/bifrost 
 
-echo sudo ls -lah /usr/local/bin && echo sudo ls -lah $GOPATH/bin 
+echo sudo ls -lah /tmp && echo sudo ls -lah $GOPATH/bin 
 
 sudo apt-get update -y
 sudo apt-get install ruby-dev build-essential -y
