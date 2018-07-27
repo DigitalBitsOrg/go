@@ -8,14 +8,17 @@ addons:
 go:
   - '1.10'
 
-go_import_path: github.com/DigitalBitsOrg/go
+go_import_path: github.com/digitalbitsorg/go
 
 install:
+  - mkdir -p $GOPATH/src/github.com/digitalbitsorg/go
+  - cp -Rf ./* $GOPATH/src/github.com/digitalbitsorg/go
+  - cd $GOPATH/src/github.com/digitalbitsorg/go
   - echo $PWD
   - ls -lah
   - curl https://glide.sh/get | sh
   - glide install
-  - go install github.com/DigitalBitsOrg/go/services/bifrost
+  - go install github.com/digitalbitsorg/go/services/bifrost
   - chmod +x $GOPATH/bin/bifrost
   - ls -lah $GOPATH/bin
 
