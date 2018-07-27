@@ -12,8 +12,6 @@ sudo mkdir -p $GOPATH/src/github.com/digitalbits/go \
     && go install github.com/digitalbits/go/services/federation \
     && go install github.com/digitalbits/go/services/horizon 
 
-sudo ls -lah /usr/local/bin && sudo ls -lah $GOPATH/bin 
-
 sudo mv $GOPATH/bin/bifrost /usr/local/bin \
   && sudo chmod +x /usr/local/bin/bifrost 
   
@@ -22,7 +20,9 @@ sudo mv $GOPATH/bin/federation /usr/local/bin \
 
 sudo mv $GOPATH/bin/horizon /usr/local/bin \
   && chmod +x /usr/local/bin/horizon 
-  
+
+sudo ls -lah /usr/local/bin && sudo ls -lah $GOPATH/bin 
+
 sudo apt-get update -y
 sudo apt-get install ruby-dev build-essential -y
 gem install fpm
