@@ -39,4 +39,4 @@ deploy:
   skip_cleanup: true
   script: ./deploy.sh 2>&1
   on:
-    branch: OS-15
+    branch: master
