@@ -51,4 +51,4 @@ To learn more about the concept of assets in the DigitalBits network, take a loo
 
 |  Resource                      |    Type    |    Resource URI Template     |
 | ------------------------------ | ---------- | ---------------------------- |
-| [All Assets](../assets-all.md) | Collection | `/assets` (`GET`)            |
+| [All Assets](../endpoints/assets-all.md) | Collection | `/assets` (`GET`)            |

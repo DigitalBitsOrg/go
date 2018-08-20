@@ -111,8 +111,8 @@ Attributes depend on effect type.
 
 |  Resource                |    Type    |    Resource URI Template             |
 | ------------------------ | ---------- | ------------------------------------ |
-| [All Effects](../effects-all.md) | Collection | `/effects`                           |
-| [Operation Effects](../effects-for-operation.md) | Collection | `/operations/:id/effects`            |
-| [Account Effects](../effects-for-account.md) | Collection | `/accounts/:account_id/effects`      |
-| [Ledger Effects](../effects-for-ledger.md) | Collection | `/ledgers/:ledger_id/effects`        |
+| [All Effects](../endpoints/effects-all.md) | Collection | `/effects`                           |
+| [Operation Effects](../endpoints/effects-for-operation.md) | Collection | `/operations/:id/effects`            |
+| [Account Effects](../endpoints/effects-for-account.md) | Collection | `/accounts/:account_id/effects`      |
+| [Ledger Effects](../endpoints/effects-for-ledger.md) | Collection | `/ledgers/:ledger_id/effects`        |
 

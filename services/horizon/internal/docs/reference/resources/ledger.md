@@ -81,12 +81,12 @@ To learn more about the concept of ledgers in the DigitalBits network, take a lo
 ## Endpoints
 | Resource                | Type       | Resource URI Template              |
 |-------------------------|------------|------------------------------------|
-| [All ledgers](../ledgers-all.md)         | Collection | `/ledgers`                         |
-| [Single Ledger](../ledgers-single.md)       | Single     | `/ledgers/:id`                     |
-| [Ledger Transactions](../transactions-for-ledger.md) | Collection | `/ledgers/:ledger_id/transactions` |
-| [Ledger Operations](../operations-for-ledger.md)   | Collection | `/ledgers/:ledger_id/operations`   |
-| [Ledger Payments](../payments-for-ledger.md)     | Collection | `/ledgers/:ledger_id/payments`     |
-| [Ledger Effects](../effects-for-ledger.md)      | Collection | `/ledgers/:ledger_id/effects`      |
+| [All ledgers](../endpoints/ledgers-all.md)         | Collection | `/ledgers`                         |
+| [Single Ledger](../endpoints/ledgers-single.md)       | Single     | `/ledgers/:id`                     |
+| [Ledger Transactions](../endpoints/transactions-for-ledger.md) | Collection | `/ledgers/:ledger_id/transactions` |
+| [Ledger Operations](../endpoints/operations-for-ledger.md)   | Collection | `/ledgers/:ledger_id/operations`   |
+| [Ledger Payments](../endpoints/payments-for-ledger.md)     | Collection | `/ledgers/:ledger_id/payments`     |
+| [Ledger Effects](../endpoints/effects-for-ledger.md)      | Collection | `/ledgers/:ledger_id/effects`      |
 
 
 

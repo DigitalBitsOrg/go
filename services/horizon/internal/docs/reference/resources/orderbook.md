@@ -21,5 +21,5 @@ This resource has no links.
 
 | Resource                 | Type       | Resource URI Template                |
 |--------------------------|------------|--------------------------------------|
-| [Orderbook Details](../orderbook-details.md)       | Single | `/orderbook?{orderbook_params}`       |
-| [Trades for Orderbook](../trades-for-orderbook.md)       | Collection | `/orderbook/trades?{orderbook_params}`       |
+| [Orderbook Details](../endpoints/orderbook-details.md)       | Single | `/orderbook?{orderbook_params}`       |
+| [Trades for Orderbook](../endpoints/trades-for-orderbook.md)       | Collection | `/orderbook/trades?{orderbook_params}`       |

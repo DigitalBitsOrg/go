@@ -32,10 +32,10 @@ To learn more about the concept of transactions in the DigitalBits network, take
 |                   rel                    |                                           Example                                           |                             Description                          |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | self | `/transactions/6391dd190f15f7d1665ba53c63842e368f485651a53d8d852ed442a446d1c69a`|  |
-| account | `/accounts/GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ` | The source [account](../accounts-single.md) for this transaction. |
-| ledger | `/ledgers/3` | The [ledger](../ledgers-single.md) in which this transaction was applied. |
-| operations | `/transactions/6391dd190f15f7d1665ba53c63842e368f485651a53d8d852ed442a446d1c69a/operations` | [Operations](../operations-for-transaction.md) included in this transaction. |
-| effects | `/transactions/6391dd190f15f7d1665ba53c63842e368f485651a53d8d852ed442a446d1c69a/effects` | [Effects](../effects-for-transaction.md) which resulted by operations in this transaction. |
+| account | `/accounts/GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ` | The source [account](../endpoints/accounts-single.md) for this transaction. |
+| ledger | `/ledgers/3` | The [ledger](../endpoints/ledgers-single.md) in which this transaction was applied. |
+| operations | `/transactions/6391dd190f15f7d1665ba53c63842e368f485651a53d8d852ed442a446d1c69a/operations` | [Operations](../endpoints/operations-for-transaction.md) included in this transaction. |
+| effects | `/transactions/6391dd190f15f7d1665ba53c63842e368f485651a53d8d852ed442a446d1c69a/effects` | [Effects](../endpoints/effects-for-transaction.md) which resulted by operations in this transaction. |
 | precedes | `/transactions?cursor=12884905984&order=asc` | A collection of transactions that occur after this transaction. |
 | succeeds | `/transactions?cursor=12884905984&order=desc` | A collection of transactions that occur before this transaction. |
 
@@ -89,12 +89,12 @@ To learn more about the concept of transactions in the DigitalBits network, take
 
 |  Resource                |    Type    |    Resource URI Template             |
 | ------------------------ | ---------- | ------------------------------------ |
-| [All Transactions](../transactions-all.md)     | Collection | `/transactions` (`GET`) |
-| [Post Transaction](../transactions-create.md)     | Action | `/transactions`  (`POST`) |
-| [Transaction Details](../transactions-single.md)  | Single     | `/transactions/:id` |
-| [Account Transactions](../transactions-for-account.md) | Collection | `/accounts/:account_id/transactions` |
-| [Ledger Transactions](../transactions-for-ledger.md)  | Collection | `/ledgers/:ledger_id/transactions`   |
+| [All Transactions](../endpoints/transactions-all.md)     | Collection | `/transactions` (`GET`) |
+| [Post Transaction](../endpoints/transactions-create.md)     | Action | `/transactions`  (`POST`) |
+| [Transaction Details](../endpoints/transactions-single.md)  | Single     | `/transactions/:id` |
+| [Account Transactions](../endpoints/transactions-for-account.md) | Collection | `/accounts/:account_id/transactions` |
+| [Ledger Transactions](../endpoints/transactions-for-ledger.md)  | Collection | `/ledgers/:ledger_id/transactions`   |
 
 
 ## Submitting transactions
-To submit a new transaction to DigitalBits network, it must first be built and signed locally. Then you can submit a hex representation of your transaction’s [XDR](../../learn/xdr.md) to the `/transactions` endpoint. Read more about submitting transactions in [Post Transaction](../transactions-create.md) doc.
+To submit a new transaction to DigitalBits network, it must first be built and signed locally. Then you can submit a hex representation of your transaction’s [XDR](../../learn/xdr.md) to the `/transactions` endpoint. Read more about submitting transactions in [Post Transaction](../endpoints/transactions-create.md) doc.
