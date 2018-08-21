@@ -4,7 +4,7 @@ title: Effect
 
 A successful operation will yield zero or more **effects**.  These effects
 represent specific changes that occur in the ledger, but are not necessarily
-directly reflected in the [ledger](https://developer.digitalbits.io/learn/concepts/ledger.html) or [history](https://github.com/digitalbitsorg/digitalbits-core/blob/master/docs/history.md), as [transactions](https://developers.digitalbits.io/learn/concepts/transactions.html) and [operations](https://developer.digitialbits.io/learn/concepts/operations.html) are.
+directly reflected in the [ledger](https://developer.digitalbits.io/guides/concepts/ledger.html) or [history](https://github.com/digitalbitsorg/digitalbits-core/blob/master/docs/history.md), as [transactions](https://developers.digitalbits.io/guides/concepts/transactions.html) and [operations](https://developer.digitialbits.io/guides/concepts/operations.html) are.
 
 ## Effect types
 

@@ -6,7 +6,7 @@ clientData:
 
 Returns information and links relating to a single [account](../resources/account.md).
 
-The balances section in the returned JSON will also list all the [trust lines](https://developer.digitalbits.io/learn/concepts/assets.html) this account has set up. Note this will only return trustlines that have the necessary authorization to work. Meaning if an accountA trusts another accountB that has the [authorization required](https://developer.digitalbits.io/guides/concepts/accounts.html#flags) flag set the trustline wont show up until accountB [allows](https://developer.digitalbits.io/guides/concepts/list-of-operations.html#allow-trust) accountA to hold its assets.
+The balances section in the returned JSON will also list all the [trust lines](https://developer.digitalbits.io/guide/concepts/assets.html) this account has set up. Note this will only return trustlines that have the necessary authorization to work. Meaning if an accountA trusts another accountB that has the [authorization required](https://developer.digitalbits.io/guides/concepts/accounts.html#flags) flag set the trustline wont show up until accountB [allows](https://developer.digitalbits.io/guides/concepts/list-of-operations.html#allow-trust) accountA to hold its assets.
 
 ## Request
 

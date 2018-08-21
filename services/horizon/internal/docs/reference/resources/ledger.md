@@ -4,7 +4,7 @@ title: Ledger
 
 A **ledger** resource contains information about a given ledger.
 
-To learn more about the concept of ledgers in the DigitalBits network, take a look at the [DigitalBits ledger concept guide](https://developer.digitalbits.io/learn/concepts/ledger.html).
+To learn more about the concept of ledgers in the DigitalBits network, take a look at the [DigitalBits ledger concept guide](https://developer.digitalbits.io/guides/concepts/ledger.html).
 
 ## Attributes
 
@@ -12,7 +12,7 @@ To learn more about the concept of ledgers in the DigitalBits network, take a lo
 |-------------------------|--------|-------------------------------------------------------------------------------------------------------------------------------|
 | id                      | string | The id is a unique identifier for this ledger.                                                                                |
 | paging_token            | number | A [paging token](./page.md) suitable for use as a `cursor` parameter.                                                         |
-| hash                    | string | A hex-encoded SHA-256 hash of the ledger's [XDR](../../learn/xdr.md)-encoded form.                                            |
+| hash                    | string | A hex-encoded SHA-256 hash of the ledger's [XDR](../xdr.md)-encoded form.                                            |
 | prev_hash               | string | The hash of the ledger that chronologically came before this one.                                                             |
 | sequence                | number | Sequence number of this ledger, suitable for use as the as the :id parameter for url templates that require a ledger number.  |
 | transaction_count       | number | The number of transactions in this ledger.                                                                                    |
@@ -90,5 +90,4 @@ To learn more about the concept of ledgers in the DigitalBits network, take a lo
 
 
 
-[inflation]: https://developer.digitalbits.io/learn/concepts/inflation.html
-[fee]: https://developer.digitalbits.io/learn/concepts/fees.html
+[fee]: https://developer.digitalbits.io/guides/concepts/fees.html

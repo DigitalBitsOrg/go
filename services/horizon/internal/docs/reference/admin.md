@@ -14,7 +14,7 @@ The DigitalBits Foundation runs two horizon servers, one for the public network 
 
 ## Prerequisites
 
-Horizon is a dependent upon a digitalbits-core server.  Horizon needs access to both the SQL database and the HTTP API that is published by digitalbits-core. See [the administration guide](https://developer.digitalbits.io/digitalbits-core/learn/admin.html
+Horizon is a dependent upon a digitalbits-core server.  Horizon needs access to both the SQL database and the HTTP API that is published by digitalbits-core. See [the administration guide](https://developer.digitalbits.io/digitalbits-core/admin.html
 ) to learn how to set up and administer a digitalbits-core server.  Secondly, horizon is dependent upon a postgresql server, which it uses to store processed core data for ease of use. Horizon requires postgres version >= 9.3.
 
 In addition to the two required prerequisites above, you may optionally install a redis server to be used for rate limiting requests.
@@ -132,4 +132,4 @@ Metrics are collected while a horizon process is running and they are exposed at
 
 ## I'm Stuck! Help!
 
-If any of the above steps don't work or you are otherwise prevented from correctly setting up horizon, please come to our community and tell us.  Either [post a question at our Stack Exchange](https://digitalbits.stackexchange.com/) or [chat with us on slack](http://slack.digitalbits.io/) to ask for help.
+If any of the above steps don't work or you are otherwise prevented from correctly setting up horizon, please come to our community and tell us. [Chat with us on slack](http://slack.digitalbits.io/) to ask for help.

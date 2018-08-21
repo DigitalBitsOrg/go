@@ -5,8 +5,8 @@ title: Transaction Malformed
 When you submit a malformed transaction to Horizon, Horizon will return a `transaction_malformed` error. There are many ways in which a transaction is malformed, including
 * you submitted an empty string
 * your base64-encoded string is invalid
-* your [XDR](../../learn/xdr.md) structure is invalid
-* you have leftover bytes in your [XDR](../../learn/xdr.md) structure
+* your [XDR](../../reference/xdr.md) structure is invalid
+* you have leftover bytes in your [XDR](../../reference/xdr.md) structure
 
 If you are encountering this error, please check the contents of the transaction you are submitting. This error is similar to the [Bad Request](./bad-request.md) error response and, therefore, the [HTTP 400 Error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes).
 

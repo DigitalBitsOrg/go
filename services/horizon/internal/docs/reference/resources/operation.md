@@ -2,11 +2,11 @@
 title: Operation
 ---
 
-[Operations](https://developer.digitalbits.io/learn/concepts/operations.html) are objects that represent a desired change to the ledger: payments,
+[Operations](https://developer.digitalbits.io/guides/concepts/operations.html) are objects that represent a desired change to the ledger: payments,
 offers to exchange currency, changes made to account options, etc.  Operations
 are submitted to the DigitalBits network grouped in a [Transaction](./transaction.md).
 
-To learn more about the concept of operations in the DigitalBits network, take a look at the [DigitalBits operations concept guide](https://developer.digitalbits.io/learn/concepts/operations.html).
+To learn more about the concept of operations in the DigitalBits network, take a look at the [DigitalBits operations concept guide](https://developer.digitalbits.io/guides/concepts/operations.html).
 
 ## Operation Types
 

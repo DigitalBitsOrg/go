@@ -10,7 +10,7 @@ responsibility of your client library.
 
 Transaction submission and the subsequent validation and inclusion into the
 DigitalBits Network's ledger is a [complicated and asynchronous
-process](https://developer.digitalbits.io/learn/concepts/transactions.html#life-cycle).
+process](https://developer.digitalbits.io/guide/concepts/transactions.html#life-cycle).
 To reduce the complexity, horizon manages these asynchronous processes for the
 client and will wait to hear results from the DigitalBits Network before returning
 an HTTP response to a client.
@@ -24,7 +24,7 @@ and not attempt to submit the transaction again. Only in cases where a
 transaction's status is unknown (and thus will have a chance of being included
 into a ledger) will a resubmission to the network occur.
 
-Information about [building transactions](https://developer.digitalbits.io/js-digitalbits-base/learn/building-transactions.html) in JavaScript.
+Information about [building transactions](https://developer.digitalbits.io/js-digitalbits-base/reference/building-transactions.html) in JavaScript.
 
 ## Request
 

@@ -2,9 +2,9 @@
 title: Horizon
 ---
 
-Horizon is the server for the client facing API for the DigitalBits ecosystem.  It acts as the interface between [digitalbits-core](https://developer.digitalbits.io/learn/digitalbits-core) and applications that want to access the DigitalBits network. It allows you to submit transactions to the network, check the status of accounts, subscribe to event streams, etc. See [an overview of the DigitalBits ecosystem](https://developer.digitalbits.io/guides/) for more details.
+Horizon is the server for the client facing API for the DigitalBits ecosystem.  It acts as the interface between [digitalbits-core](https://developer.digitalbits.io/digitalbits-core) and applications that want to access the DigitalBits network. It allows you to submit transactions to the network, check the status of accounts, subscribe to event streams, etc. See [an overview of the DigitalBits ecosystem](https://developer.digitalbits.io/guides/) for more details.
 
-You can interact directly with horizon via curl or a web browser but SDF provides a [JavaScript SDK](https://developer.digitalbits.io/js-digitalbits-sdk/learn/) for clients to use to interact with Horizon.
+You can interact directly with horizon via curl or a web browser but SDF provides a [JavaScript SDK](https://developer.digitalbits.io/js-digitalbits-sdk/reference/) for clients to use to interact with Horizon.
 
 SDF runs a instance of Horizon that is connected to the test net [https://horizon.testnet.digitalbits.io/](https://horizon.testnet.digitalbits.io/).
 
