@@ -10,7 +10,7 @@ responsibility of your client library.
 
 Transaction submission and the subsequent validation and inclusion into the
 DigitalBits Network's ledger is a [complicated and asynchronous
-process](https://developer.digitalbits.io/guide/concepts/transactions.html#life-cycle).
+process](https://developer.digitalbits.io/guides/concepts/transactions.html#life-cycle).
 To reduce the complexity, horizon manages these asynchronous processes for the
 client and will wait to hear results from the DigitalBits Network before returning
 an HTTP response to a client.
