@@ -97,7 +97,7 @@ terminal.
 
 ## Following payments using `curl`
 
-To follow new payments connected to your account you simply need to send `Accept: text/event-stream` header to the [/payments](../../reference/payments-all.md) endpoint.
+To follow new payments connected to your account you simply need to send `Accept: text/event-stream` header to the [/payments](../../reference/endpoints/payments-all.md) endpoint.
 
 ```bash
 $ curl -H "Accept: text/event-stream" "https://horizon.testnet.digitalbits.io/accounts/GB7JFK56QXQ4DVJRNPDBXABNG3IVKIXWWJJRJICHRU22Z5R5PI65GAK3/payments"
@@ -125,7 +125,7 @@ data: {"_links":{"effects":{"href":"/operations/713226564145153/effects/{?cursor
        "type":"create_account"}
 ```
 
-Every time you receive a new payment you will get a new row of data. Payments is not the only endpoint that supports streaming. You can also stream transactions [/transactions](../../reference/transactions-all.md) and operations [/operations](../../reference/operations-all.md).
+Every time you receive a new payment you will get a new row of data. Payments is not the only endpoint that supports streaming. You can also stream transactions [/transactions](../../reference/endpoints/transactions-all.md) and operations [/operations](../../reference/endpoints/operations-all.md).
 
 ## Following payments using `EventStream`
 

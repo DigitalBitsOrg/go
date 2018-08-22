@@ -14,12 +14,11 @@ The DigitalBits Foundation runs two horizon servers, one for the public network 
 
 ## Prerequisites
 
-Horizon is a dependent upon a digitalbits-core server.  Horizon needs access to both the SQL database and the HTTP API that is published by digitalbits-core. See [the administration guide](https://developer.digitalbits.io/digitalbits-core/admin.html
+Horizon is a dependent upon a digitalbits-core server.  Horizon needs access to both the SQL database and the HTTP API that is published by digitalbits-core. See [the administration guide](https://developer.digitalbits.io/digitalbits-core/software/admin.html
 ) to learn how to set up and administer a digitalbits-core server.  Secondly, horizon is dependent upon a postgresql server, which it uses to store processed core data for ease of use. Horizon requires postgres version >= 9.3.
 
 In addition to the two required prerequisites above, you may optionally install a redis server to be used for rate limiting requests.
 
-## Installing
 ## Installing
 
 To install horizon, you have a choice: either downloading a [prebuilt release for your target architecture](https://github.com/digitalbitsorg/go/releases) and operation system, or [building horizon yourself](#Building).  When either approach is complete, you will find yourself with a directory containing a file named `horizon`.  This file is a native binary.

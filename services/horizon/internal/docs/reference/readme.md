@@ -7,7 +7,7 @@ Horizon is an API server for the DigitalBits ecosystem.  It acts as the interfac
 [![Horizon: API webserver for the DigitalBits network](https://img.youtube.com/vi/AtJ-f6Ih4A4/sddefault.jpg "Horizon: API webserver for the DigitalBits network")](https://www.youtube.com/watch?v=AtJ-f6Ih4A4)
 
 Horizon provides a RESTful API to allow client applications to interact with the DigitalBits network. You can communicate with Horizon using cURL or just your web browser. However, if you're building a client application, you'll likely want to use a DigitalBits SDK in the language of your client.
-SDF provides a [JavaScript SDK](https://developer.digitalbits.io/js-digitalbits-sdk/learn/index.html) for clients to use to interact with Horizon.
+SDF provides a [JavaScript SDK](https://developer.digitalbits.io/js-digitalbits-sdk/reference/index.html) for clients to use to interact with Horizon.
 
 SDF runs a instance of Horizon that is connected to the test net: [https://horizon.testnet.digitalbits.io/](https://horizon.testnet.digitalbits.io/) and one that is connected to the public DigitalBits network:
 [https://horizon.livenet.digitalbits.io/](https://horizon.livenet.digitalbits.io/).
