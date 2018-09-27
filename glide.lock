@@ -14,6 +14,7 @@ imports:
 - name: github.com/asaskevich/govalidator
   version: f0666aa80d7dcf75bd564ae8717b952d74a29d6a
   repo: git@github.com/digitalbitsorg/govalidator.git
+  vcs: git
 - name: github.com/aws/aws-sdk-go
   version: 8649d278323ebf6bd20c9cd56ecb152b1c617375
   repo: https://github.com/aws/aws-sdk-go
