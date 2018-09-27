@@ -19,7 +19,7 @@ import (
 )
 
 const hexPrefixPat = "/[0-9a-f]{2}/[0-9a-f]{2}/[0-9a-f]{2}/"
-const rootHASPath = ".well-known/stellar-history.json"
+const rootHASPath = ".well-known/digitalbits-history.json"
 
 type CommandOptions struct {
 	Concurrency int
