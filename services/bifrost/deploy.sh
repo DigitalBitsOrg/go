@@ -2,7 +2,7 @@
 
 if [ $BUILD_FROM_SRC -gt 0 ]
 then
-  # deploy horizon binary
+  # deploy bifrost binary
   mkdir -p /go/src/github.com/digitalbits/go \
     && git clone --depth 1 --branch master git@github.com:DigitalBitsOrg/go.git /go/src/github.com/digitalbits/go \
     && cd /go/src/github.com/digitalbits/go \

@@ -11,11 +11,7 @@ import (
 
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/rpcclient"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/facebookgo/inject"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/services/bifrost/bitcoin"
 	"github.com/digitalbitsorg/go/services/bifrost/config"
 	"github.com/digitalbitsorg/go/services/bifrost/database"
@@ -27,6 +23,10 @@ import (
 	supportConfig "github.com/digitalbitsorg/go/support/config"
 	"github.com/digitalbitsorg/go/support/errors"
 	"github.com/digitalbitsorg/go/support/log"
+	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/facebookgo/inject"
+	"github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
@@ -128,7 +128,7 @@ This command will create 3 server.Server's listening on ports 8000-8002.`,
 
 		accounts := make(chan server.GenerateAddressResponse)
 		users := stress.Users{
-			Horizon: &horizon.Client{
+			Horizon: &frontier.Client{
 				URL: cfg.Stellar.Horizon,
 				HTTP: &http.Client{
 					Timeout: 60 * time.Second,
@@ -216,7 +216,7 @@ var versionCmd = &cobra.Command{
 }
 
 func init() {
-	// TODO I think these should be default in stellar/go:
+	// TODO I think these should be default in digitalbitsorg/go:
 	log.SetLevel(log.InfoLevel)
 	log.DefaultLogger.Logger.Formatter.(*logrus.TextFormatter).FullTimestamp = true
 
@@ -367,7 +367,7 @@ func createServer(cfg config.Config, stressTest bool) *server.Server {
 		stellarAccountConfigurator.StartingBalance = "41"
 	}
 
-	horizonClient := &horizon.Client{
+	horizonClient := &frontier.Client{
 		URL: cfg.Stellar.Horizon,
 		HTTP: &http.Client{
 			Timeout: 20 * time.Second,

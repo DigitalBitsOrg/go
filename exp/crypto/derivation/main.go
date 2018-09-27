@@ -14,11 +14,11 @@ import (
 )
 
 const (
-	// StellarAccountPrefix is a prefix for Stellar key pairs derivation.
+	// StellarAccountPrefix is a prefix for digitalbits key pairs derivation.
 	StellarAccountPrefix = "m/44'/148'"
 	// StellarPrimaryAccountPath is a derivation path of the primary account.
 	StellarPrimaryAccountPath = "m/44'/148'/0'"
-	// StellarAccountPathFormat is a path format used for Stellar key pair
+	// StellarAccountPathFormat is a path format used for digitalbits key pair
 	// derivation as described in SEP-00XX. Use with `fmt.Sprintf` and `DeriveForPath`.
 	StellarAccountPathFormat = "m/44'/148'/%d'"
 	// FirstHardenedIndex is the index of the first hardened key.

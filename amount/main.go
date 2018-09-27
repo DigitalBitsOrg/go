@@ -2,10 +2,10 @@
 // the format used internally to digitalbits-core.
 //
 // digitalbits-core represents asset "amounts" as 64-bit integers, but to enable
-// fractional units of an asset, horizon, the client-libraries and other built
+// fractional units of an asset, frontier, the client-libraries and other built
 // on top of digitalbits-core use a convention, encoding amounts as a string of
 // decimal digits with up to seven digits of precision in the fractional
-// portion. For example, an amount shown as "101.001" in horizon would be
+// portion. For example, an amount shown as "101.001" in frontier would be
 // represented in digitalbits-core as 1010010000.
 package amount
 

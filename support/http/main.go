@@ -1,4 +1,4 @@
-// Package http provides easy access to Stellar's best practices for building
+// Package http provides easy access to digitalbits's best practices for building
 // http servers.  The primary method to use is `Serve`, which sets up
 // an server that can support http/2 and can gracefully quit after receiving a
 // SIGINT signal.
@@ -13,7 +13,6 @@ import (
 	"github.com/digitalbitsorg/go/support/errors"
 	"github.com/digitalbitsorg/go/support/log"
 	"golang.org/x/net/http2"
-	"gopkg.in/tylerb/graceful.v1"
 )
 
 // DefaultListenAddr represents the default address and port on which a server

@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/keypair"
 	"github.com/digitalbitsorg/go/services/bifrost/common"
 	"github.com/digitalbitsorg/go/support/errors"
@@ -33,7 +33,7 @@ func (ac *AccountConfigurator) Start() error {
 
 	root, err := ac.Horizon.Root()
 	if err != nil {
-		err = errors.Wrap(err, "Error loading Horizon root")
+		err = errors.Wrap(err, "Error loading Frontier root")
 		ac.log.Error(err)
 		return err
 	}
@@ -69,7 +69,7 @@ func (ac *AccountConfigurator) ConfigureAccount(destination, assetCode, amount s
 		"assetCode":   assetCode,
 		"amount":      amount,
 	})
-	localLog.Info("Configuring Stellar account")
+	localLog.Info("Configuring DigitalBits account")
 
 	ac.processingCountMutex.Lock()
 	ac.processingCount++
@@ -85,7 +85,7 @@ func (ac *AccountConfigurator) ConfigureAccount(destination, assetCode, amount s
 	for {
 		_, exists, err := ac.getAccount(destination)
 		if err != nil {
-			localLog.WithField("err", err).Error("Error loading account from Horizon")
+			localLog.WithField("err", err).Error("Error loading account from Frontier")
 			time.Sleep(2 * time.Second)
 			continue
 		}
@@ -94,10 +94,10 @@ func (ac *AccountConfigurator) ConfigureAccount(destination, assetCode, amount s
 			break
 		}
 
-		localLog.WithField("destination", destination).Info("Creating Stellar account")
+		localLog.WithField("destination", destination).Info("Creating DigitalBits account")
 		err = ac.createAccount(destination)
 		if err != nil {
-			localLog.WithField("err", err).Error("Error creating Stellar account")
+			localLog.WithField("err", err).Error("Error creating DigitalBits account")
 			time.Sleep(2 * time.Second)
 			continue
 		}
@@ -150,11 +150,11 @@ func (ac *AccountConfigurator) ConfigureAccount(destination, assetCode, amount s
 	localLog.Info("Account successully configured")
 }
 
-func (ac *AccountConfigurator) getAccount(account string) (horizon.Account, bool, error) {
-	var hAccount horizon.Account
+func (ac *AccountConfigurator) getAccount(account string) (frontier.Account, bool, error) {
+	var hAccount frontier.Account
 	hAccount, err := ac.Horizon.LoadAccount(account)
 	if err != nil {
-		if err, ok := err.(*horizon.Error); ok && err.Response.StatusCode == http.StatusNotFound {
+		if err, ok := err.(*frontier.Error); ok && err.Response.StatusCode == http.StatusNotFound {
 			return hAccount, false, nil
 		}
 		return hAccount, false, err
@@ -163,7 +163,7 @@ func (ac *AccountConfigurator) getAccount(account string) (horizon.Account, bool
 	return hAccount, true, nil
 }
 
-func (ac *AccountConfigurator) trustlineExists(account horizon.Account, assetCode string) bool {
+func (ac *AccountConfigurator) trustlineExists(account frontier.Account, assetCode string) bool {
 	for _, balance := range account.Balances {
 		if balance.Asset.Issuer == ac.IssuerPublicKey && balance.Asset.Code == assetCode {
 			return true

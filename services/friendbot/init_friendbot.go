@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/services/friendbot/internal"
 	"github.com/digitalbitsorg/go/strkey"
 )
@@ -18,7 +18,7 @@ func initFriendbot(friendbotSecret string, networkPassphrase string, horizonURL 
 
 	return &internal.Bot{
 		Secret: friendbotSecret,
-		Horizon: &horizon.Client{
+		Horizon: &frontier.Client{
 			URL:  horizonURL,
 			HTTP: http.DefaultClient,
 		},

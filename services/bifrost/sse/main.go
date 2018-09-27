@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/r3labs/sse"
 	"github.com/digitalbitsorg/go/support/log"
+	"github.com/r3labs/sse"
 )
 
 // AddressEvent is an event sent to address SSE stream.
@@ -41,7 +41,7 @@ type Event struct {
 }
 
 // Storage contains history of sent events. Because each transaction and
-// Stellar account is always processed by a single Bifrost server, we need
+// digitalbits account is always processed by a single Bifrost server, we need
 // to broadcast events in case client streams events from the other Bifrost
 // server.
 //

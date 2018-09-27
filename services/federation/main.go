@@ -4,11 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"goji.io"
 	"goji.io/pat"
 
-	"github.com/rs/cors"
-	"github.com/spf13/cobra"
 	"github.com/digitalbitsorg/go/handlers/federation"
 	"github.com/digitalbitsorg/go/support/app"
 	"github.com/digitalbitsorg/go/support/config"
@@ -16,6 +13,8 @@ import (
 	"github.com/digitalbitsorg/go/support/errors"
 	"github.com/digitalbitsorg/go/support/http"
 	"github.com/digitalbitsorg/go/support/log"
+	"github.com/rs/cors"
+	"github.com/spf13/cobra"
 )
 
 // Config represents the configuration of a federation server
@@ -40,7 +39,7 @@ func main() {
 		Use:   "federation",
 		Short: "digitalbits federation server",
 		Long: `
-The digitalbits federation server let's you easily integrate the stellar federation 
+The digitalbits federation server let's you easily integrate the digitalbits federation 
 protocol with your organization.  This is achieved by connecting the 
 application to your customer database and providing the appropriate queries in 
 the config file.

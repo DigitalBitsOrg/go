@@ -4,7 +4,7 @@ import (
 	"strconv"
 
 	"github.com/digitalbitsorg/go/build"
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/support/errors"
 	"github.com/digitalbitsorg/go/support/log"
 )
@@ -79,7 +79,7 @@ func (ac *AccountConfigurator) submitTransaction(mutators ...build.TransactionMu
 	_, err = ac.Horizon.SubmitTransaction(tx)
 	if err != nil {
 		fields := log.F{"err": err}
-		if err, ok := err.(*horizon.Error); ok {
+		if err, ok := err.(*frontier.Error); ok {
 			fields["result"] = string(err.Problem.Extras["result_xdr"])
 			ac.updateSequence()
 		}

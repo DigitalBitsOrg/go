@@ -1,4 +1,4 @@
-package stellargo
+package digitalbitsgo
 
 import (
 	"bytes"

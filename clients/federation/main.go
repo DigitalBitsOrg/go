@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/digitalbitsorg/go/clients/horizon"
-	"github.com/digitalbitsorg/go/clients/stellartoml"
+	"github.com/digitalbitsorg/go/clients/frontier"
+	"github.com/digitalbitsorg/go/clients/digitalbitstoml"
 	proto "github.com/digitalbitsorg/go/protocols/federation"
 )
 
@@ -15,14 +15,14 @@ const FederationResponseMaxSize = 100 * 1024
 // DefaultTestNetClient is a default federation client for testnet
 var DefaultTestNetClient = &Client{
 	HTTP:        http.DefaultClient,
-	Horizon:     horizon.DefaultTestNetClient,
+	Horizon:     frontier.DefaultTestNetClient,
 	StellarTOML: stellartoml.DefaultClient,
 }
 
 // DefaultPublicNetClient is a default federation client for pubnet
 var DefaultPublicNetClient = &Client{
 	HTTP:        http.DefaultClient,
-	Horizon:     horizon.DefaultPublicNetClient,
+	Horizon:     frontier.DefaultPublicNetClient,
 	StellarTOML: stellartoml.DefaultClient,
 }
 
@@ -41,7 +41,7 @@ type ClientInterface interface {
 	ForwardRequest(domain string, fields url.Values) (*proto.NameResponse, error)
 }
 
-// Horizon represents a horizon client that can be consulted for data when
+// Horizon represents a frontier client that can be consulted for data when
 // needed as part of the federation protocol
 type Horizon interface {
 	HomeDomainForAccount(aid string) (string, error)
@@ -54,7 +54,7 @@ type HTTP interface {
 }
 
 // StellarTOML represents a client that can resolve a given domain name to
-// stellar.toml file.  The response is used to find the federation server that a
+// digitalbits.toml file.  The response is used to find the federation server that a
 // query should be made against.
 type StellarTOML interface {
 	GetStellarToml(domain string) (*stellartoml.Response, error)

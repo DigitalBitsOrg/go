@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/digitalbitsorg/go/build"
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/keypair"
 	"github.com/digitalbitsorg/go/services/bifrost/common"
 	"github.com/digitalbitsorg/go/services/bifrost/server"
@@ -25,7 +25,7 @@ func (u *Users) Start(accounts chan<- server.GenerateAddressResponse) {
 	u.users = map[string]*User{}
 
 	go func() {
-		cursor := horizon.Cursor("now")
+		cursor := frontier.Cursor("now")
 		err := u.Horizon.StreamPayments(context.Background(), u.IssuerPublicKey, &cursor, u.onNewPayment)
 		if err != nil {
 			panic(err)
@@ -56,7 +56,7 @@ func (u *Users) Start(accounts chan<- server.GenerateAddressResponse) {
 	}
 }
 
-func (u *Users) onNewPayment(payment horizon.Payment) {
+func (u *Users) onNewPayment(payment frontier.Payment) {
 	var destination string
 
 	switch payment.Type {
@@ -239,7 +239,7 @@ func (u *Users) newUser(kp *keypair.Full) server.GenerateAddressResponse {
 
 		_, err = u.Horizon.SubmitTransaction(txeB64)
 		if err != nil {
-			if herr, ok := err.(*horizon.Error); ok {
+			if herr, ok := err.(*frontier.Error); ok {
 				fmt.Println(herr.Problem)
 			}
 			panic(err)
@@ -280,11 +280,11 @@ func (u *Users) updateUserState(publicKey string, state UserState) {
 	user.State = state
 }
 
-func (u *Users) getAccount(account string) (horizon.Account, bool, error) {
-	var hAccount horizon.Account
+func (u *Users) getAccount(account string) (frontier.Account, bool, error) {
+	var hAccount frontier.Account
 	hAccount, err := u.Horizon.LoadAccount(account)
 	if err != nil {
-		if err, ok := err.(*horizon.Error); ok && err.Response.StatusCode == http.StatusNotFound {
+		if err, ok := err.(*frontier.Error); ok && err.Response.StatusCode == http.StatusNotFound {
 			return hAccount, false, nil
 		}
 		return hAccount, false, err

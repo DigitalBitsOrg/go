@@ -7,7 +7,7 @@ import (
 	"net/url"
 
 	"github.com/asaskevich/govalidator"
-	"github.com/digitalbitsorg/go/clients/stellartoml"
+	"github.com/digitalbitsorg/go/clients/digitalbitstoml"
 	"github.com/digitalbitsorg/go/keypair"
 	"github.com/digitalbitsorg/go/support/errors"
 )

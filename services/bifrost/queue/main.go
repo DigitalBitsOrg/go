@@ -24,7 +24,7 @@ type Transaction struct {
 // The queue must not allow duplicates (including history) or must implement deduplication
 // interval so it should not allow duplicate entries for 5 minutes since the first
 // entry with the same ID was added.
-// This is a critical requirement! Otherwise ETH/BTC may be sent twice to Stellar account.
+// This is a critical requirement! Otherwise ETH/BTC may be sent twice to digitalbits account.
 // If you don't know what to do, use default AWS SQS FIFO queue or DB queue.
 type Queue interface {
 	// QueueAdd inserts the element to this queue. If element already exists in a queue, it should

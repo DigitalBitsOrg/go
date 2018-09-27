@@ -23,10 +23,10 @@ install:
   - glide install
 
 script:
-  - go install github.com/digitalbitsorg/go/services/horizon
+  - go install github.com/digitalbitsorg/go/services/frontier
   - go install github.com/digitalbitsorg/go/services/bifrost
   - go install github.com/digitalbitsorg/go/services/federation
-  - chmod +x $GOPATH/bin/horizon
+  - chmod +x $GOPATH/bin/frontier
   - chmod +x $GOPATH/bin/bifrost
   - chmod +x $GOPATH/bin/federation
 

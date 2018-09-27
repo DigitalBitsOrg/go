@@ -19,12 +19,12 @@ type Config struct {
 		// SignerSecretKey is:
 		// * Issuer's secret key if only one instance of Bifrost is deployed.
 		// * Channel's secret key if more than one instance of Bifrost is deployed.
-		// https://www.stellar.org/developers/guides/channels.html
+		// https://developer.digitalbits.io/guides/channels.html
 		// Signer's sequence number will be consumed in transaction's sequence number.
 		SignerSecretKey string `valid:"required" toml:"signer_secret_key"`
 		// StartingBalance is the starting amount of XLM for newly created accounts.
 		// Default value is 41. Increase it if you need Data records / other custom entities on new account.
-		StartingBalance  string `valid:"optional,numeric" toml:"starting_balance"`
+		StartingBalance string `valid:"optional,numeric" toml:"starting_balance"`
 	} `valid:"required" toml:"stellar"`
 	Database struct {
 		Type string `valid:"matches(^postgres$)"`

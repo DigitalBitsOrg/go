@@ -10,4 +10,4 @@ bumps.  A breaking change will get clearly notified in this log.
 
 ### Added
 
-- Extracted friendbot out of horizon
+- Extracted friendbot out of frontier

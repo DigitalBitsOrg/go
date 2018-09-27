@@ -3,14 +3,14 @@ package stellar
 import (
 	"sync"
 
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/support/log"
 )
 
-// AccountConfigurator is responsible for configuring new Stellar accounts that
+// AccountConfigurator is responsible for configuring new DigitalBits accounts that
 // participate in ICO.
 type AccountConfigurator struct {
-	Horizon           horizon.ClientInterface `inject:""`
+	Horizon           frontier.ClientInterface `inject:""`
 	NetworkPassphrase string
 	IssuerPublicKey   string
 	SignerSecretKey   string

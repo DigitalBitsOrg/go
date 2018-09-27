@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	b "github.com/digitalbitsorg/go/build"
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/network"
 )
 
@@ -20,7 +20,7 @@ func main() {
 	tx, err := b.Transaction(
 		b.Network{passphrase},
 		b.SourceAccount{from},
-		b.AutoSequence{horizon.DefaultTestNetClient},
+		b.AutoSequence{frontier.DefaultTestNetClient},
 		b.Payment(
 			b.Destination{to},
 			b.NativeAmount{"0.1"},

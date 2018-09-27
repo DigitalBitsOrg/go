@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/digitalbitsorg/go/clients/horizon"
+	"github.com/digitalbitsorg/go/clients/frontier"
 	"github.com/digitalbitsorg/go/strkey"
 	"github.com/digitalbitsorg/go/support/render/hal"
 	"github.com/digitalbitsorg/go/support/render/problem"
@@ -27,7 +27,7 @@ func (handler *FriendbotHandler) Handle(w http.ResponseWriter, r *http.Request) 
 }
 
 // doHandle is just a convenience method that returns the object to be rendered
-func (handler *FriendbotHandler) doHandle(r *http.Request) (*horizon.TransactionSuccess, error) {
+func (handler *FriendbotHandler) doHandle(r *http.Request) (*frontier.TransactionSuccess, error) {
 	err := handler.checkEnabled()
 	if err != nil {
 		return nil, err
@@ -70,12 +70,12 @@ func (handler *FriendbotHandler) loadAddress(r *http.Request) (string, error) {
 	return unescaped, err
 }
 
-func (handler *FriendbotHandler) loadResult(address string) (*horizon.TransactionSuccess, error) {
+func (handler *FriendbotHandler) loadResult(address string) (*frontier.TransactionSuccess, error) {
 	result, err := handler.Friendbot.Pay(address)
 	switch e := err.(type) {
-	case horizon.Error:
+	case frontier.Error:
 		return result, e.Problem.ToProblem()
-	case *horizon.Error:
+	case *frontier.Error:
 		return result, e.Problem.ToProblem()
 	}
 	return result, err

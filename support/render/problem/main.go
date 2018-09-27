@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-errors/errors"
 	"github.com/digitalbitsorg/go/support/log"
+	"github.com/go-errors/errors"
 	"golang.org/x/net/context"
 )
 
@@ -45,7 +45,7 @@ func Inflate(p *P) {
 	//TODO: add requesting url to extra info
 
 	//TODO: make this prefix configurable
-	p.Type = "https://developer.digitalbits.io/horizon-errors/" + p.Type
+	p.Type = "https://developer.digitalbits.io/frontier/reference/errors/" + p.Type
 
 	p.Instance = ""
 }
@@ -122,7 +122,7 @@ var ServerError = P{
 	Detail: "An error occurred while processing this request.  This is usually due " +
 		"to a bug within the server software.  Trying this request again may " +
 		"succeed if the bug is transient, otherwise please report this issue " +
-		"to the issue tracker at: https://github.com/digitalbitsorg/go/services/horizon/internal/issues." +
+		"to the issue tracker at: https://github.com/digitalbitsorg/go/services/frontier/internal/issues." +
 		" Please include this response in your issue.",
 }
 

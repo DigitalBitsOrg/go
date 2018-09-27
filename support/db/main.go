@@ -1,4 +1,4 @@
-// Package db is the base package for database access at stellar.  It primarily
+// Package db is the base package for database access at digitalbits.  It primarily
 // exposes Session which is a lightweight wrapper around a *sqlx.DB that
 // provides utility methods (See the repo tests for examples).
 //
@@ -15,8 +15,8 @@ import (
 	"database/sql"
 
 	"github.com/Masterminds/squirrel"
-	"github.com/jmoiron/sqlx"
 	"github.com/digitalbitsorg/go/support/errors"
+	"github.com/jmoiron/sqlx"
 	"golang.org/x/net/context"
 
 	// Enable mysql
