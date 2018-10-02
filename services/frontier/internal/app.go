@@ -197,7 +197,7 @@ func (a *App) UpdateStellarCoreInfo() {
 		log.Warnf("could not load stellar-core info: %s", err)
 	}
 
-	core := &stellarcore.Client{
+	core := &digitalbitscore.Client{
 		URL: a.config.StellarCoreURL,
 	}
 
