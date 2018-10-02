@@ -7,6 +7,7 @@ import (
 
 	"github.com/digitalbitsorg/go/services/frontier/internal/log"
 	"github.com/digitalbitsorg/go/services/frontier/internal/txsub/sequence"
+	"github.com/rcrowley/go-metrics"
 )
 
 // System represents a completely configured transaction submission system.

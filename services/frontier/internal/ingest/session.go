@@ -783,7 +783,7 @@ func (is *Session) reportCursorState() error {
 		return nil
 	}
 
-	core := &stellarcore.Client{URL: is.StellarCoreURL}
+	core := &digitalbitscore.Client{URL: is.StellarCoreURL}
 
 	err := core.SetCursor(context.Background(), "HORIZON", is.Cursor.LastLedger)
 

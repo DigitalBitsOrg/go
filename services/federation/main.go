@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"goji.io"
 	"goji.io/pat"
 
 	"github.com/digitalbitsorg/go/handlers/federation"
