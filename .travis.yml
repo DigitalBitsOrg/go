@@ -1,18 +1,14 @@
 language: go
 sudo: required
-
 addons:
   artifacts:
     paths:
-      - $GOPATH/bin/bifrost
+      - "$GOPATH/bin/bifrost"
     debug: true
-
 matrix:
   fast_finish: true
-
 go:
   - '1.10'
-
 install:
   - mkdir $GOPATH/tmp
   - cp -Rf ./* $GOPATH/tmp && rm -Rf $GOPATH/src/DigitalBitsOrg
@@ -21,7 +17,6 @@ install:
   - cd $GOPATH/src/github.com/digitalbitsorg/go
   - curl https://glide.sh/get | sh
   - glide install
-
 script:
   - go install github.com/digitalbitsorg/go/services/frontier
   - go install github.com/digitalbitsorg/go/services/bifrost
@@ -29,14 +24,16 @@ script:
   - chmod +x $GOPATH/bin/frontier
   - chmod +x $GOPATH/bin/bifrost
   - chmod +x $GOPATH/bin/federation
-
 before_deploy:
   - pyenv global 2.7
   - pip install cloudsmith-cli
-
 deploy:
   provider: script
   skip_cleanup: true
-  script: ./deploy.sh 2>&1
+  script: "./deploy.sh 2>&1"
   on:
     branch: master
+notifications:
+  email: false
+  slack:
+    secure: OHgfPuyDxEXJuiKmIGencF6nE/7FG8JL8q2NR3YmyYhHJVU7Z1tmShDmu6NqNpx2BKfvhEe7a/gEZhKWoYNUWEIeHhRqkpIT/c3cjsIvO4+kgc+58k+bHCADGfoOg83NQB/Zxwci6XHfd6M/mmXUUYpbONweL5Lnf8dHPc7IwqPuHYQVmagrL1RjPYx2KErL2xbFS1J7cJMItG1CT5AheteamfJyAeBoRPaUhh8wMIgJrOJPMDAsWU+G078e/ZVklx8F8ICrKDmXjWEhHmJpUFewFDoKNJ6A1Rx+VxAfxFEsNvHvtPxkPyd6NoouzK/ANIaaDELjW4eRUOIoTOysEyq0Nji9D4sOM5zf0z8UfQFSOS+gm2+Aelp9a0R/hdQB+Blo5MaYGuf+UY0GQ+MrtvFY+gGNP1B3Pi0hmWkFc2MgrLnAz/s/MQCFHiByg5/ymFHPGEk+ZTQqxUxqMvZVs9DON0Oh1OWWqkFaz2D/gZKzjwO8edx1AZz9pOFoIN4XJzgyk9CRjWkSBkRbTIg1FNACeKJqc5lvIiM6M/mT3Xn50Nx67EYH74h3KAgc0zJp08h2rB1AZUeZtPcrg70OxC+qC/Z5PIDIMlzKbZOV2EigAJ1M/9tjsNL400KZ1ffK4T2hIwLvFtkUkhqAZ2mQ7M5YBknUoiE6q8gzcKYB2vc=
